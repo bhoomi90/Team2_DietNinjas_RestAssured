@@ -1,0 +1,23 @@
+[
+	{
+	  
+	  "userLoginEmail": "Team601@gmail.com",
+	  "password": "test",
+	  "endpoint" : "/login"
+	},
+	{
+		"endpoint" : "/login",
+		"userLoginEmail": "Team601@gmail.com",
+		 "password": " "
+	},
+	{
+		"endpoint" : "/login",
+		"userLoginEmail": "Team601@gmail.com",
+		"password": "test"	
+	},
+	{
+		"endpoint" : "/log",
+		"userLoginEmail": "Team601@gmail.com",
+		"password": "test"	
+	}
+]
