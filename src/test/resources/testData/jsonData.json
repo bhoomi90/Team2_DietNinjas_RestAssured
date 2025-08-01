@@ -1,0 +1,42 @@
+{
+  "loginTests": [
+    {
+      "testCaseId": "LT_001",
+      "scenario": "Check user able to login as admin with valid data",
+      "module": "Login",
+      "method": "POST",
+      "endpoints": "/login",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK",
+      "typeOfTesting": "Positive",
+      "loginInputdata": {
+		"password": "test",
+        "userLoginEmail":"Team601@gmail.com"       
+      }
+    }
+  ]	, 
+   "dieticianTests": [
+	   {
+	  	"testCaseId": "DT_001",
+	  	"scenario": "Check admin able to create dietician with valid data and token",
+	      "module": "CreateDietician",
+	      "method": "POST",
+	  	"endpoints": "/dietician",
+	  	"expectedStatusCode": 201,
+	  	"expectedStatusLineMsg": "Created",
+	  	"typeOfTesting": "Positive",
+	  	"dieticianInputdata": {
+	  	  "firstName": "Navishapalz",
+	  	  "lastName": "Palz",
+	  	  "dHospitalName": "SutterHealth",
+	  	  "dHospitalCityName": "Sunnyvale",
+	  	  "dHospitalStreetName": "wolfst",
+	  	  "dHospitalPinCode": "898965",
+	  	  "dateOfBirth": "2000-05-16T17:50:00.760Z",
+	  	  "contact": "9894026284",
+	  	  "dEducation": "DPD",
+	  	  "userLoginEmail": "saro22@gmail.com"
+	       }
+     }
+   ]
+}
