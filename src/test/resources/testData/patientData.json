@@ -1,6 +1,8 @@
 [
 	{
 	  "testCaseId": "p1",
+	  "scenarioName": "Create patient",
+	  "scenarioType": "positive",
 	  "endpoint": "/patient",
 	  "patientDataInput": {
 		  "FirstName": "dipa",
@@ -23,6 +25,8 @@
 	{
 	  "testCaseId": "p2",
 	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid token",
+	  "scenarioType": "negative",
 	  "patientDataInput": {
 		  "FirstName": "lalu",
 		  "LastName": "hirpara",

@@ -4,6 +4,9 @@ public class PatientTestData {
 
 	private String testCaseId;
 	private String endpoint;
+	private String scenarioName;
+	private String scenarioType;
+
 	private PatientPojo patientDataInput;
 	private VitalsPojo vitalsDataInput;
 	
@@ -19,6 +22,18 @@ public class PatientTestData {
 	}
 	public void setEndpoint(String endpoint) {
 		this.endpoint = endpoint;
+	}
+	public String getScenarioName() {
+		return scenarioName;
+	}
+	public void setScenarioName(String scenarioName) {
+		this.scenarioName = scenarioName;
+	}
+	public String getScenarioType() {
+		return scenarioType;
+	}
+	public void setScenarioType(String scenarioType) {
+		this.scenarioType = scenarioType;
 	}
 	public PatientPojo getPatientDataInput() {
 		return patientDataInput;

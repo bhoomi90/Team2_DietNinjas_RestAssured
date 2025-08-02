@@ -31,7 +31,7 @@ public class createPatientStepsDef {
 	
 	// Create Patient without Bearer token
 	@Given("Dietician creates POST request by entering valid data into the form-data key and value fields with {string}.")
-	public void dietician_creates_post_request_by_entering_valid_data_into_the_form_data_key_and_value_fields_with(String testCaseID) throws IOException {
+	public void dietician_creates_post_request_by_entering_valid_data_into_the_form_data_key_and_value_fields_with(String scenarioName) throws IOException {
 	    ObjectMapper mapper = new ObjectMapper();
 	    
 	    patientDataList = mapper.readValue(
@@ -40,7 +40,7 @@ public class createPatientStepsDef {
 		    );
 	    
 	    for(PatientTestData patientData : patientDataList) {
-	    	if(patientData.getTestCaseId().equals(testCaseID)) {
+	    	if(patientData.getScenarioName().equals(scenarioName)) {
 	    		PatientPojo patientPojo = patientData.getPatientDataInput();
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
@@ -75,7 +75,7 @@ public class createPatientStepsDef {
 	
 	// Create Patient using Admin token
 	@Given("Admin creates POST request by entering valid data into the form-data key and value fields with {string}")
-	public void admin_creates_post_request_by_entering_valid_data_into_the_form_data_key_and_value_fields_with(String testCaseID) throws IOException {
+	public void admin_creates_post_request_by_entering_valid_data_into_the_form_data_key_and_value_fields_with(String scenarioName) throws IOException {
 		ObjectMapper mapper = new ObjectMapper();
 		
 	    patientDataList = mapper.readValue(
@@ -84,7 +84,7 @@ public class createPatientStepsDef {
 		    );
 	    
 	    for(PatientTestData patientData : patientDataList) {
-	    	if(patientData.getTestCaseId().equals(testCaseID)) {
+	    	if(patientData.getScenarioName().equals(scenarioName)) {
 	    		PatientPojo patientPojo = patientData.getPatientDataInput();
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
@@ -112,9 +112,9 @@ public class createPatientStepsDef {
 	}
 
 	@When("Admin send POST http request with endpoint to create patient with {string}")
-	public void admin_send_post_http_request_with_endpoint_to_create_patient_with(String testCaseID) {
+	public void admin_send_post_http_request_with_endpoint_to_create_patient_with(String scenarioName) {
 	    for(PatientTestData patientData : patientDataList) {
-	    	if(patientData.getTestCaseId().equals(testCaseID)) {
+	    	if(patientData.getScenarioName().equals(scenarioName)) {
 	    		response = request.when().post(patientData.getEndpoint());
 	    	}
 	    }
@@ -128,7 +128,7 @@ public class createPatientStepsDef {
 	
 	// Create patient with valid data using Dietician token successfully
 	@Given("Dietician creates POST request by entering valid data with {string}. \\( Mandatory and additional details) into the form-data key and value fields.")
-	public void dietician_creates_post_request_by_entering_valid_data_with_mandatory_and_additional_details_into_the_form_data_key_and_value_fields(String testCaseID) throws IOException {
+	public void dietician_creates_post_request_by_entering_valid_data_with_mandatory_and_additional_details_into_the_form_data_key_and_value_fields(String scenarioName) throws IOException {
 	    ObjectMapper mapper = new ObjectMapper();
 	    
 	    patientDataList = mapper.readValue(
@@ -137,7 +137,7 @@ public class createPatientStepsDef {
 		    );
 	    
 	    for(PatientTestData patientData : patientDataList) {
-	    	if(patientData.getTestCaseId().equals(testCaseID)) {
+	    	if(patientData.getScenarioName().equals(scenarioName)) {
 	    		PatientPojo patientPojo = patientData.getPatientDataInput();
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
@@ -165,9 +165,9 @@ public class createPatientStepsDef {
 	}
 
 	@When("Dietician send POST http request with endpoint to create patient with {string}")
-	public void dietician_send_post_http_request_with_endpoint_to_create_patient_with(String testCaseID) {
+	public void dietician_send_post_http_request_with_endpoint_to_create_patient_with(String scenarioName) {
 	    for(PatientTestData patientData : patientDataList) {
-	    	if(patientData.getTestCaseId().equals(testCaseID)) {
+	    	if(patientData.getScenarioName().equals(scenarioName)) {
 	    		response = request.when().post(patientData.getEndpoint());
 	    	}
 	    }
@@ -180,7 +180,7 @@ public class createPatientStepsDef {
 	
 	// Create Patient using Patient token
 	@Given("Patient creates POST request by entering valid data into the form-data key and value fields with {string}")
-	public void patient_creates_post_request_by_entering_valid_data_into_the_form_data_key_and_value_fields_with(String testCaseID) throws IOException {
+	public void patient_creates_post_request_by_entering_valid_data_into_the_form_data_key_and_value_fields_with(String scenarioName) throws IOException {
 	    ObjectMapper mapper = new ObjectMapper();
 	    
 	    patientDataList = mapper.readValue(
@@ -189,7 +189,7 @@ public class createPatientStepsDef {
 		    );
 	    
 	    for(PatientTestData patientData : patientDataList) {
-	    	if(patientData.getTestCaseId().equals(testCaseID)) {
+	    	if(patientData.getScenarioName().equals(scenarioName)) {
 	    		PatientPojo patientPojo = patientData.getPatientDataInput();
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
@@ -217,9 +217,9 @@ public class createPatientStepsDef {
 	}
 
 	@When("Patient send POST http request with endpoint to create patient with {string}")
-	public void patient_send_post_http_request_with_endpoint_to_create_patient_with(String testCaseID) {
+	public void patient_send_post_http_request_with_endpoint_to_create_patient_with(String scenarioName) {
 	    for(PatientTestData patientData : patientDataList) {
-	    	if(patientData.getTestCaseId().equals(testCaseID)) {
+	    	if(patientData.getScenarioName().equals(scenarioName)) {
 	    		response = request.when().post(patientData.getEndpoint());
 	    	}
 	    }
