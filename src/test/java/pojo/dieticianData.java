@@ -4,33 +4,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class dieticianData {
 
-	@JsonProperty("firstName")
+	@JsonProperty("Firstname")
 	private String firstname;
 
-	@JsonProperty("lastName")
+	@JsonProperty("Lastname")
 	private String lastname;
 
-	@JsonProperty("contact")
+	@JsonProperty("ContactNumber")
 	private String contactNumber;
 
+	@JsonProperty("DateOfBirth")
 	private String dateOfBirth;
 
-	@JsonProperty("userLoginEmail")
+	@JsonProperty("Email")
 	private String email;
 
-	@JsonProperty("dHospitalName")
+	@JsonProperty("HospitalName")
 	private String hospitalName;
 
-	@JsonProperty("dHospitalStreetName")
+	@JsonProperty("HospitalStreet")
 	private String hospitalStreet;
 
-	@JsonProperty("dHospitalCityName")
+	@JsonProperty("HospitalCity")
 	private String hospitalCity;
 
-	@JsonProperty("dHospitalPinCode")
+	@JsonProperty("HospitalPincode")
 	private String hospitalPincode;
 
-	@JsonProperty("dEducation")
+	@JsonProperty("Education")
 	private String education;
 
 	public String getFirstname() {

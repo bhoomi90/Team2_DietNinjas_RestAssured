@@ -26,16 +26,16 @@
 	  	"expectedStatusLineMsg": "Created",
 	  	"typeOfTesting": "Positive",
 	  	"dieticianInputdata": {
-	  	  "firstName": "Navishapalz",
-	  	  "lastName": "Palz",
-	  	  "dHospitalName": "SutterHealth",
-	  	  "dHospitalCityName": "Sunnyvale",
-	  	  "dHospitalStreetName": "wolfst",
-	  	  "dHospitalPinCode": "898965",
-	  	  "dateOfBirth": "2000-05-16T17:50:00.760Z",
-	  	  "contact": "9894026284",
-	  	  "dEducation": "DPD",
-	  	  "userLoginEmail": "saro22@gmail.com"
+	  	  "Firstname": "Navishapalz",
+	  	  "Lastname": "Palz",
+	  	  "HospitalName": "SutterHealth",
+	  	  "HospitalCity": "Sunnyvale",
+	  	  "HospitalStreet": "wolfst",
+	  	  "HospitalPincode": "898965",
+	  	  "DateOfBirth": "2001-05-16T17:50:00.760Z",
+	  	  "ContactNumber": "9894026282",
+	  	  "Education": "DPD",
+	  	  "Email": "saro23@gmail.com"
 	       }
      }
    ]
