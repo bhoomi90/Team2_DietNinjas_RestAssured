@@ -43,7 +43,7 @@ Then Dietician recieves 400 Bad request after create patient request with "<erro
 		| Create patient with invalid FoodPreference | VEGAN, VEGETARIAN, JAIN, EGGETARIAN, NONVEG           |
 		| Create patient with invalid CuisineCategory| Invalid Cuisine Category                              |
 #		| Create patient with invalid DateOfBirth    | |
-		 
+#		 
 #Scenario Outline: Check dietician able to create patient with valid mandatory fields and invalid data (additional details)
 #Given Dietician creates POST request only by invalid additional details into the form-data key and value fields with "<scenarioName>".
 #When Dietician send POST http request with endpoint to create patient with "<scenarioName>"
@@ -52,7 +52,7 @@ Then Dietician recieves 400 Bad request after create patient request with "<erro
 #		|           scenarioName                     |            errorMessage                               |
 #		| Create patient with invalid weight in vitals | |
 #		| Create patient with invalid height in vitals | |
-#		
+		
 Scenario Outline: Check dietician able to create patient with valid data and invalid method
 Given Dietician creates PUT request by entering valid data into the form-data key and value fields with "<scenarioName>".
 When Dietician send PUT http request with endpoint to create patient with "<scenarioName>"

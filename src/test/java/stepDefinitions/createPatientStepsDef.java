@@ -45,20 +45,20 @@ public class createPatientStepsDef {
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
 	    		
+	    		String filePath = patientData.getFile();
+	    		System.out.println("Sending file as: " +filePath);
+	    		File file = new File(filePath);
+	    		
 	    		VitalsPojo vitalsPojo = patientData.getVitalsDataInput();
 	    		String vitalsInfoJson = mapper.writeValueAsString(vitalsPojo);
 	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);
-	    		
-	    		File file = new File(configReader.getProperty("pdfPath"));
-	    		String filePath = file.getAbsolutePath();
-	    		System.out.println("Sending file as: " +filePath);
 	    		
 	    	    request = given()
 	    	    	.baseUri(configReader.getProperty("baseURL"))	    	    	
 	    	    	.contentType(ContentType.MULTIPART)
 	    	   		.multiPart("patientInfo", patientInfoJson)
+	    	   		.multiPart("file", file, "application/pdf")
 	    		    .multiPart("vitals", vitalsInfoJson);
-	    		    //.multiPart("file", new File(configReader.getProperty("pdfPath")));
 	    	    
 	    	    System.out.println("POST request sent: Breaking loop");
 	    	    break;
@@ -89,21 +89,21 @@ public class createPatientStepsDef {
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
 	    		
+	    		String filePath = patientData.getFile();
+	    		System.out.println("Sending file as: " +filePath);
+	    		File file = new File(filePath);
+	    		
 	    		VitalsPojo vitalsPojo = patientData.getVitalsDataInput();
 	    		String vitalsInfoJson = mapper.writeValueAsString(vitalsPojo);
 	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);
-	    		
-	    		File file = new File(configReader.getProperty("pdfPath"));
-	    		String filePath = file.getAbsolutePath();
-	    		System.out.println("Sending file as: " +filePath);
-	    		
+	    			
 	    	    request = given()
 	    	    	.baseUri(configReader.getProperty("baseURL"))
 	    	    	.header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNjAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDEwNDc4MSwiZXhwIjoxNzU0MTMzNTgxfQ.A6JQ4r9zDn5rjbfDrocr39jQul8msY7oKWqOKNDaIYRSCpUkfao5RFIKcZGjp0bcdEMNXEfA6Nm2G5r16muhCw")
 	    	    	.contentType(ContentType.MULTIPART)
 	    	   		.multiPart("patientInfo", patientInfoJson)
+	    	   		.multiPart("file", file, "application/pdf")
 	    		    .multiPart("vitals", vitalsInfoJson);
-	    		    //.multiPart("file", new File(configReader.getProperty("pdfPath")));
 	    	    
 	    	    System.out.println("POST request sent: Breaking loop");
 	    	    break;
@@ -142,21 +142,21 @@ public class createPatientStepsDef {
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
 	    		
+	    		String filePath = patientData.getFile();
+	    		System.out.println("Sending file as: " +filePath);
+	    		File file = new File(filePath);
+	    		
 	    		VitalsPojo vitalsPojo = patientData.getVitalsDataInput();
 	    		String vitalsInfoJson = mapper.writeValueAsString(vitalsPojo);
 	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);
 	    		
-	    		File file = new File(configReader.getProperty("pdfPath"));
-	    		String filePath = file.getAbsolutePath();
-	    		System.out.println("Sending file as: " +filePath);
-	    		
 	    	    request = given()
 	    	    	.baseUri(configReader.getProperty("baseURL"))
-	    	    	.header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWhhMTBAZ21haWwuY29tIiwiaWF0IjoxNzU0MDk3MTg5LCJleHAiOjE3NTQxMjU5ODl9.nV82gp6J5zzpZjeznLd_WOcxSRPANki9TB8ZaaWd9A9ngxSnxlduqoTHj5d2EL6sUh992gf11Ux64mR23GuYTA")
+	    	    	.header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWhhMTBAZ21haWwuY29tIiwiaWF0IjoxNzU0MTUwODM0LCJleHAiOjE3NTQxNzk2MzR9.jYjhBgld1fyf0dbagCmAD33Qloakv9H3qZO7ILnJlnoOyc2cHcAkbgvWTO5eDS48Y9Dk15DvKHmwCiFe-Kg2sQ")
 	    	    	.contentType(ContentType.MULTIPART)
 	    	   		.multiPart("patientInfo", patientInfoJson)
+	    	   		.multiPart("file", file, "application/pdf")
 	    		    .multiPart("vitals", vitalsInfoJson);
-	    		    //.multiPart("file", new File(configReader.getProperty("pdfPath")));
 	    	    
 	    	    System.out.println("POST request sent: Breaking loop");
 	    	    break;
@@ -194,21 +194,21 @@ public class createPatientStepsDef {
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
 	    		
+	    		String filePath = patientData.getFile();
+	    		System.out.println("Sending file as: " +filePath);
+	    		File file = new File(filePath);
+	    		
 	    		VitalsPojo vitalsPojo = patientData.getVitalsDataInput();
 	    		String vitalsInfoJson = mapper.writeValueAsString(vitalsPojo);
 	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);
-	    		
-	    		File file = new File(configReader.getProperty("pdfPath"));
-	    		String filePath = file.getAbsolutePath();
-	    		System.out.println("Sending file as: " +filePath);
-	    		
+	    		   		
 	    	    request = given()
 	    	    	.baseUri(configReader.getProperty("baseURL"))
 	    	    	.header("Authorization", "Bearer 992gf11Ux64mR23GuYTA")
 	    	    	.contentType(ContentType.MULTIPART)
 	    	   		.multiPart("patientInfo", patientInfoJson)
+	    	   		.multiPart("file", file, "application/pdf")
 	    		    .multiPart("vitals", vitalsInfoJson);
-	    		    //.multiPart("file", new File(configReader.getProperty("pdfPath")));
 	    	    
 	    	    System.out.println("POST request sent: Breaking loop");
 	    	    break;
@@ -273,20 +273,20 @@ public class createPatientStepsDef {
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Not Sending patientInfo as: " + patientInfoJson);
 	    		
+	    		String filePath = patientData.getFile();
+	    		System.out.println("Sending file as: " +filePath);
+	    		File file = new File(filePath);
+	    		
 	    		VitalsPojo vitalsPojo = patientData.getVitalsDataInput();
 	    		String vitalsInfoJson = mapper.writeValueAsString(vitalsPojo);
-	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);
-	    		
-	    		File file = new File(configReader.getProperty("pdfPath"));
-	    		String filePath = file.getAbsolutePath();
-	    		System.out.println("Sending file as: " +filePath);
+	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);	    		
 	    		
 	    	    request = given()
 	    	    	.baseUri(configReader.getProperty("baseURL"))
 	    	    	.header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWhhMTBAZ21haWwuY29tIiwiaWF0IjoxNzU0MTUwODM0LCJleHAiOjE3NTQxNzk2MzR9.jYjhBgld1fyf0dbagCmAD33Qloakv9H3qZO7ILnJlnoOyc2cHcAkbgvWTO5eDS48Y9Dk15DvKHmwCiFe-Kg2sQ")
 	    	    	.contentType(ContentType.MULTIPART)
+	    	    	.multiPart("file", file, "application/pdf")
 	    		    .multiPart("vitals", vitalsInfoJson);
-	    		    //.multiPart("file", new File(configReader.getProperty("pdfPath")));
 	    	    
 	    	    System.out.println("POST request sent: Breaking loop");
 	    	    break;
@@ -316,12 +316,14 @@ public class createPatientStepsDef {
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
 	    		
+	    		String filePath = patientData.getFile();
+	    		System.out.println("Sending file as: " +filePath);
+	    		File file = new File(filePath);
+	    		
 	    		VitalsPojo vitalsPojo = patientData.getVitalsDataInput();
 	    		String vitalsInfoJson = mapper.writeValueAsString(vitalsPojo);
 	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);
 	    		
-	    		File file = new File(configReader.getProperty("pdfPath"));
-	    		String filePath = file.getAbsolutePath();
 	    		System.out.println("Sending file as: " +filePath);
 	    		
 	    	    request = given()
@@ -329,8 +331,8 @@ public class createPatientStepsDef {
 	    	    	.contentType(ContentType.MULTIPART)
 	    	    	.header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWhhMTBAZ21haWwuY29tIiwiaWF0IjoxNzU0MTUwODM0LCJleHAiOjE3NTQxNzk2MzR9.jYjhBgld1fyf0dbagCmAD33Qloakv9H3qZO7ILnJlnoOyc2cHcAkbgvWTO5eDS48Y9Dk15DvKHmwCiFe-Kg2sQ")
 	    	   		.multiPart("patientInfo", patientInfoJson)
+	    	   		.multiPart("file", file, "application/pdf")
 	    		    .multiPart("vitals", vitalsInfoJson);
-	    		    //.multiPart("file", new File(configReader.getProperty("pdfPath")));
 	    	    
 	    	    System.out.println("POST request sent: Breaking loop");
 	    	    break;
@@ -360,21 +362,21 @@ public class createPatientStepsDef {
 //	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 //	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
 //	    		
+//				String filePath = patientData.getFile();
+//				System.out.println("Sending file as: " +filePath);
+//				File file = new File(filePath);
+//	
 //	    		VitalsPojo vitalsPojo = patientData.getVitalsDataInput();
 //	    		String vitalsInfoJson = mapper.writeValueAsString(vitalsPojo);
-//	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);
-//	    		
-//	    		File file = new File(configReader.getProperty("pdfPath"));
-//	    		String filePath = file.getAbsolutePath();
-//	    		System.out.println("Sending file as: " +filePath);
+//	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);	    		
 //	    		
 //	    	    request = given()
 //	    	    	.baseUri(configReader.getProperty("baseURL"))	    	    	
 //	    	    	.contentType(ContentType.MULTIPART)
 //	    	    	.header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWhhMTBAZ21haWwuY29tIiwiaWF0IjoxNzU0MTUwODM0LCJleHAiOjE3NTQxNzk2MzR9.jYjhBgld1fyf0dbagCmAD33Qloakv9H3qZO7ILnJlnoOyc2cHcAkbgvWTO5eDS48Y9Dk15DvKHmwCiFe-Kg2sQ")
 //	    	   		.multiPart("patientInfo", patientInfoJson)
+//					.multiPart("file", file, "application/pdf")
 //	    		    .multiPart("vitals", vitalsInfoJson);
-//	    		    //.multiPart("file", new File(configReader.getProperty("pdfPath")));
 //	    	    
 //	    	    System.out.println("POST request sent: Breaking loop");
 //	    	    break;
@@ -397,21 +399,21 @@ public class createPatientStepsDef {
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
 	    		
+	    		String filePath = patientData.getFile();
+	    		System.out.println("Sending file as: " +filePath);
+	    		File file = new File(filePath);
+	    		
 	    		VitalsPojo vitalsPojo = patientData.getVitalsDataInput();
 	    		String vitalsInfoJson = mapper.writeValueAsString(vitalsPojo);
 	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);
-	    		
-	    		File file = new File(configReader.getProperty("pdfPath"));
-	    		String filePath = file.getAbsolutePath();
-	    		System.out.println("Sending file as: " +filePath);
 	    		
 	    	    request = given()
 	    	    	.baseUri(configReader.getProperty("baseURL"))	    	    	
 	    	    	.contentType(ContentType.MULTIPART)
 	    	    	.header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWhhMTBAZ21haWwuY29tIiwiaWF0IjoxNzU0MTUwODM0LCJleHAiOjE3NTQxNzk2MzR9.jYjhBgld1fyf0dbagCmAD33Qloakv9H3qZO7ILnJlnoOyc2cHcAkbgvWTO5eDS48Y9Dk15DvKHmwCiFe-Kg2sQ")
 	    	   		.multiPart("patientInfo", patientInfoJson)
+	    	   		.multiPart("file", file, "application/pdf")
 	    		    .multiPart("vitals", vitalsInfoJson);
-	    		    //.multiPart("file", new File(configReader.getProperty("pdfPath")));
 	    	    
 	    	    System.out.println("POST request sent: Breaking loop");
 	    	    break;
@@ -450,19 +452,20 @@ public class createPatientStepsDef {
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
 	    		
+	    		String filePath = patientData.getFile();
+	    		System.out.println("Sending file as: " +filePath);
+	    		File file = new File(filePath);
+	    		
 	    		VitalsPojo vitalsPojo = patientData.getVitalsDataInput();
 	    		String vitalsInfoJson = mapper.writeValueAsString(vitalsPojo);
 	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);
-	    		
-	    		File file = new File(configReader.getProperty("pdfPath"));
-	    		String filePath = file.getAbsolutePath();
-	    		System.out.println("Sending file as: " +filePath);
 	    		
 	    	    request = given()
 	    	    	.baseUri(configReader.getProperty("baseURL"))	    	    	
 	    	    	.contentType(ContentType.MULTIPART)
 	    	    	.header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWhhMTBAZ21haWwuY29tIiwiaWF0IjoxNzU0MTUwODM0LCJleHAiOjE3NTQxNzk2MzR9.jYjhBgld1fyf0dbagCmAD33Qloakv9H3qZO7ILnJlnoOyc2cHcAkbgvWTO5eDS48Y9Dk15DvKHmwCiFe-Kg2sQ")
 	    	   		.multiPart("patientInfo", patientInfoJson)
+	    	   		.multiPart("file", file, "application/pdf")
 	    		    .multiPart("vitals", vitalsInfoJson);
 	    		    //.multiPart("file", new File(configReader.getProperty("pdfPath")));
 	    	    
@@ -503,21 +506,21 @@ public class createPatientStepsDef {
 	    		String patientInfoJson = mapper.writeValueAsString(patientPojo);
 	    		System.out.println("Sending patientInfo as: " + patientInfoJson);
 	    		
+	    		String filePath = patientData.getFile();
+	    		System.out.println("Sending file as: " +filePath);
+	    		File file = new File(filePath);
+	    		
 	    		VitalsPojo vitalsPojo = patientData.getVitalsDataInput();
 	    		String vitalsInfoJson = mapper.writeValueAsString(vitalsPojo);
 	    		System.out.println("Sending vitalsInfo as: " + vitalsInfoJson);
-	    		
-	    		File file = new File(configReader.getProperty("pdfPath"));
-	    		String filePath = file.getAbsolutePath();
-	    		System.out.println("Sending file as: " +filePath);
-	    		
+	    				
 	    	    request = given()
 	    	    	.baseUri(configReader.getProperty("baseURL"))	    	    	
 	    	    	.contentType(ContentType.URLENC)
 	    	    	.header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWhhMTBAZ21haWwuY29tIiwiaWF0IjoxNzU0MTUwODM0LCJleHAiOjE3NTQxNzk2MzR9.jYjhBgld1fyf0dbagCmAD33Qloakv9H3qZO7ILnJlnoOyc2cHcAkbgvWTO5eDS48Y9Dk15DvKHmwCiFe-Kg2sQ")
 	    	   		.formParam("patientInfo", patientInfoJson)
+	    	   		.formParam("file", file, "application/pdf")
 	    		    .formParam("vitals", vitalsInfoJson);
-	    		    //.multiPart("file", new File(configReader.getProperty("pdfPath")));
 	    	    
 	    	    System.out.println("POST request sent: Breaking loop");
 	    	    break;

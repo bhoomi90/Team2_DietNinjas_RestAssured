@@ -6,11 +6,17 @@ public class PatientTestData {
 	private String endpoint;
 	private String scenarioName;
 	private String scenarioType;
-
+	
 	private PatientPojo patientDataInput;
 	private VitalsPojo vitalsDataInput;
-	
+	private String file;
 
+	public String getFile() {
+		return file;
+	}
+	public void setFile(String file) {
+		this.file = file;
+	}
 	public String getTestCaseId() {
 		return testCaseId;
 	}
