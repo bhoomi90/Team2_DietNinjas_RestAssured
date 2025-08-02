@@ -1,23 +1,42 @@
-[
-	{
-	  
-	  "userLoginEmail": "Team601@gmail.com",
-	  "password": "test",
-	  "endpoint" : "/login"
-	},
-	{
-		"endpoint" : "/login",
-		"userLoginEmail": "Team601@gmail.com",
-		 "password": " "
-	},
-	{
-		"endpoint" : "/login",
-		"userLoginEmail": "Team601@gmail.com",
-		"password": "test"	
-	},
-	{
-		"endpoint" : "/log",
-		"userLoginEmail": "Team601@gmail.com",
-		"password": "test"	
-	}
-]
+{
+  "loginTests": [
+    {
+      "testCaseId": "LT_001",
+      "scenario": "Check user able to login as admin with valid data",
+      "module": "Login",
+      "method": "POST",
+      "endpoints": "/login",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK",
+      "typeOfTesting": "Positive",
+      "loginInputdata": {
+		"password": "test",
+        "userLoginEmail":"Team601@gmail.com"       
+      }
+    }
+  ]	, 
+   "dieticianTests": [
+	   {
+	  	"testCaseId": "DT_001",
+	  	"scenario": "Check admin able to create dietician with valid data and token",
+	      "module": "CreateDietician",
+	      "method": "POST",
+	  	"endpoints": "/dietician",
+	  	"expectedStatusCode": 201,
+	  	"expectedStatusLineMsg": "Created",
+	  	"typeOfTesting": "Positive",
+	  	"dieticianInputdata": {
+	  	  "Firstname": "Navishapalz",
+	  	  "Lastname": "Palz",
+	  	  "HospitalName": "SutterHealth",
+	  	  "HospitalCity": "Sunnyvale",
+	  	  "HospitalStreet": "wolfst",
+	  	  "HospitalPincode": "898965",
+	  	  "DateOfBirth": "1973-05-16T17:50:00.760Z",
+	  	  "ContactNumber": "9894026287",
+	  	  "Education": "DPD",
+	  	  "Email": "saro28@gmail.com"
+	       }
+     }
+   ]
+}
