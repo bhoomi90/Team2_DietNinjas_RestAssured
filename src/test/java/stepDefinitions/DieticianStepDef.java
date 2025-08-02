@@ -18,6 +18,9 @@ public class DieticianStepDef {
     private Response response;
     TestCaseData dieticianTestCase;
     dieticianData dieticianInputdata;
+    public static String dieticianId;       //<-- save id and loginpassword
+    public static String dieticianLoginPwd; 
+    public static String dieticianEmail;
    
     @Given("Set admin bearer token")
     public void set_admin_bearer_token() {
@@ -72,5 +75,21 @@ public class DieticianStepDef {
         assertTrue(response.getStatusLine().contains(expectedStatusCode.toString()));
         assertTrue(response.getStatusLine().contains(dieticianTestCase.getExpectedStatusLineMsg()));
 
+        //Extract and save the id and password from response
+        if(expectedStatusCode == 201) {
+        	
+        	dieticianId = response.jsonPath().getString("id");
+        	System.out.print("Dietician_Id saved:"+ dieticianId);
+        	LoggerLoad.info("Dietician_Id Password saved:"+ dieticianId);
+        	
+        	dieticianLoginPwd= response.jsonPath().getString("loginPassword");
+        	System.out.print("Dietician login Password saved:"+ dieticianLoginPwd);
+        	LoggerLoad.info("Dietician login Password saved:"+ dieticianLoginPwd);
+        	
+        	dieticianEmail = response.jsonPath().getString("Email");
+        	System.out.print("Dietician_Id saved:"+ dieticianEmail);
+        	LoggerLoad.info("Dietician_Id Password saved:"+ dieticianEmail);
+        	
+        }
     }
 }

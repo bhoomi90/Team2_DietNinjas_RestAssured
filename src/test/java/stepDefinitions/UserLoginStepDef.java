@@ -8,6 +8,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import pojo.TestCaseData;
 import pojo.loginData;
+import utilities.LoggerLoad;
 
 public class UserLoginStepDef {
 
@@ -48,7 +49,12 @@ public class UserLoginStepDef {
         assertEquals(response.getStatusLine(), expectedStatusLine, "Status line mismatch");
         
      //  Extract and save the token from response
+        if(expectedStatusCode ==200) {
+        	
         authToken = response.jsonPath().getString("token");
         System.out.println("Token saved for future requests: " + authToken);
+        LoggerLoad.info("Token saved for future requests: "+authToken);
+        
+          }
     }
 }
