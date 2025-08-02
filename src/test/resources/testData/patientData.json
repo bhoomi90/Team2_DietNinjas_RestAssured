@@ -44,5 +44,396 @@
 		  "SP": 100,
 		  "DP": 50
 	  }
-	}		
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with mandatory fields only",
+	  "scenarioType": "positive",
+	  "patientDataInput": {
+		  "FirstName": "iaan",
+		  "LastName": "sassaci",
+		  "ContactNumber": "1234499521",
+		  "Email": "sassaci02@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-11"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with valid additional details only",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "1234499521",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid firstname",
+	  "scenarioType": "positive",
+	  "patientDataInput": {
+		  "FirstName": "lar1ry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "1234499521",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid lastname",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhi$ya",
+		  "ContactNumber": "1234499521",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid contactnumber",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "1234499*21",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with contactnumber more than 10 digits",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "12344999921",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with contactnumber less than 10 digits",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "123449921",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid email",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "1234499521",
+		  "Email": "morkh@ya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid allergy",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "1234499521",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "FRUIT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid FoodPreference",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "1234499521",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "NonVegetarian",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid CuisineCategory",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "1234499521",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "NonVeg",
+		  "CuisineCategory": "And$hra",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid DateOfBirth",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "1234499521",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "NonVeg",
+		  "CuisineCategory": "Andhra",
+		  "DateOfBirth":"1986-13-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid weight in vitals",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "1234499992",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 6000.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid height in vitals",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "larry",
+		  "LastName": "morkhiya",
+		  "ContactNumber": "1234499992",
+		  "Email": "morkhiya12@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-08"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 0.5,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid method PUT",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "Atul",
+		  "LastName": "Ghodakiya",
+		  "ContactNumber": "8884499992",
+		  "Email": "ghodakiya@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-16"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 0.5,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patnt",
+	  "scenarioName": "Create patient with invalid endPoint",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "Atul",
+		  "LastName": "Ghodakiya",
+		  "ContactNumber": "8884499992",
+		  "Email": "ghodakiya@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-16"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 0.5,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	},
+	{
+	  "testCaseId": "p3",
+	  "endpoint": "/patient",
+	  "scenarioName": "Create patient with invalid contentType",
+	  "scenarioType": "negative",
+	  "patientDataInput": {
+		  "FirstName": "Atul",
+		  "LastName": "Ghodakiya",
+		  "ContactNumber": "8884499992",
+		  "Email": "ghodakiya@gmail.com",
+		  "Allergy": "WALNUT",
+		  "FoodPreference": "EGGETARIAN",
+		  "CuisineCategory": "Manipuri",
+		  "DateOfBirth":"1986-09-16"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 0.5,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	}																																																																																																								
 ]
