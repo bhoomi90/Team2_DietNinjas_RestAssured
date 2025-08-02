@@ -19,5 +19,26 @@
 		  "SP": 110,
 		  "DP": 60
 	  }
-	}	
+	},
+	{
+	  "testCaseId": "p2",
+	  "endpoint": "/patient",
+	  "patientDataInput": {
+		  "FirstName": "lalu",
+		  "LastName": "hirpara",
+		  "ContactNumber": "8111499521",
+		  "Email": "hirpara02@gmail.com",
+		  "Allergy": "PISTACHO",
+		  "FoodPreference": "Vegetarian",
+		  "CuisineCategory": "Assamese",
+		  "DateOfBirth":"1986-05-02"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 60.5,
+		  "Height": 5.0,
+		  "Temperature": 89.9,
+		  "SP": 100,
+		  "DP": 50
+	  }
+	}		
 ]
