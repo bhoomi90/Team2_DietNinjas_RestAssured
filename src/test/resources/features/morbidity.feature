@@ -3,7 +3,7 @@
 Feature: GET all morbidities
   @test1
   Scenario Outline: Check dietician able to retrieve all morbidities details
-    Given Dietician create a GET request for morbidity with no auth
+    Given Dietician create a request for morbidity with no auth
     When  Dietician send GET http request with endpoint for morbidity
     Then Dietician receives with status code <statusCode>
     Examples:
@@ -12,23 +12,26 @@ Feature: GET all morbidities
 
   @test2
   Scenario Outline: Check patient is able to retrieve all morbidities details
-    Given Patient create a valid GET request for morbidity with patient token
+    Given Login as a user with username "<userName>" and password "<passWord>"
+    And Patient create a request for morbidity with patient token
     When Patient send GET http request with endpoint for morbidity
     Then Patient receives with status code <statusCode>
     Examples:
-    |statusCode|
+    |userName|passWord|statusCode|
+    |  AAA   |AAA  |403       |
 
   @test3
   Scenario Outline: Check admin able to retrieve all morbidities details
-    Given Admin create a valid GET request for morbidity with admin token
+    Given Admin create a request for morbidity with admin token
     When Admin send GET http request with endpoint for morbidity
     Then Admin receives with status code <statusCode> with details of the patient id
     Examples:
     |statusCode|
+    |200       |
 
   @test4
   Scenario Outline: Check admin able to retrieve all morbidities details with invalid method
-    Given Admin create a valid POST request for morbidity with admin token
+    Given Admin create a request for morbidity with admin token
     When Admin send POST http request with endpoint for morbidity
     Then Admin receives with status code <statusCode>
     Examples:
@@ -36,7 +39,7 @@ Feature: GET all morbidities
 
   @test5
   Scenario Outline: Check admin able to retrieve all morbidities details with invalid endpoint
-    Given Admin create a valid GET request for morbidity with admin token
+    Given Admin create a request for morbidity with admin token
     When Admin send GET http request with invalid endpoint for morbidity
     Then Admin receives with status code <statusCode>
     Examples:
@@ -44,15 +47,16 @@ Feature: GET all morbidities
 
   @test6
   Scenario Outline: Check dietician able to retrieve all morbidities details
-    Given Dietician create a valid GET request for morbidity with dietician token
+    Given Dietician create a request for morbidity with dietician token
     When Dietician send GET http request with endpoint for morbidity
     Then Admin receives with status code <statusCode> with details of the patient id
     Examples:
     |statusCode|
 
+
   @test7
   Scenario Outline: Check dietician able to retrieve all morbidities details with invalid method
-    Given Dietician create a valid POST request for morbidity with dietician token
+    Given Dietician create a request for morbidity with dietician token
     When Dietician send POST http request with endpoint for morbidity
     Then Dietician receives with status code <statusCode>
     Examples:
@@ -60,7 +64,7 @@ Feature: GET all morbidities
 
   @test8
   Scenario Outline: Check dietician able to retrieve all morbidities details with invalid endpoint
-    Given Dietician create POST request for morbidity with dietician token
+    Given Dietician create a request for morbidity with dietician token
     When Dietician send POST http request with endpoint for morbidity
     Then Dietician receives with status code <statusCode>
     Examples:
