@@ -1,0 +1,23 @@
+[
+	{
+	  "testCaseId": "p1",
+	  "endpoint": "/patient",
+	  "patientDataInput": {
+		  "FirstName": "dipa",
+		  "LastName": "patel",
+		  "ContactNumber": "8521499521",
+		  "Email": "patel12@gmail.com",
+		  "Allergy": "ALMOND",
+		  "FoodPreference": "Jain",
+		  "CuisineCategory": "Goan",
+		  "DateOfBirth":"1986-01-04"
+	  },
+	  "vitalsDataInput": {
+		  "Weight": 65.5,
+		  "Height": 6.0,
+		  "Temperature": 99.9,
+		  "SP": 110,
+		  "DP": 60
+	  }
+	}	
+]
