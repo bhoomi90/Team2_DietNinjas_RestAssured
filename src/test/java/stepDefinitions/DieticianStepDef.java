@@ -35,6 +35,8 @@ public class DieticianStepDef {
                 .baseUri(Hooks.baseUrl)
                 .header("Authorization", "Bearer " + token)
                 .header("Content-Type", "application/json");
+
+        Hooks.request = request; // You should set it here so other step classes can use it
         		
     }
 
@@ -42,16 +44,16 @@ public class DieticianStepDef {
     public void admin_creates_post_request_with_valid_data() {
        
     	// Load current dietician test data
-        dieticianTestCase = JSONDataReader.getTestCaseById(Hooks.allTestData.getDieticianTests(), "DT_001");
+    	dieticianTestCase = JSONDataReader.getTestCaseById(Hooks.allTestData.getDieticianTests(), "DT_001");
         LoggerLoad.info("Loaded Dietician Test Case: " + dieticianTestCase.getScenario());
-        
+
         // Get input data
         dieticianInputdata = dieticianTestCase.getDieticianInputdata();
         LoggerLoad.info("Loaded Dietician Test Case: " + dieticianInputdata);
 
-        request = request.body(dieticianInputdata);
-        request.log().all();
-        LoggerLoad.info("Loaded request:" + request);
+        Hooks.request = Hooks.request.body(dieticianInputdata);
+        Hooks.request.log().all();
+        LoggerLoad.info("Request with body prepared.");
     }
 
     @When("Admin send POST http request with endpoint")
@@ -60,7 +62,7 @@ public class DieticianStepDef {
        
     	String endpoint = dieticianTestCase.getEndpoints();
     	 LoggerLoad.info("Endpoint: " + endpoint);
-    	response= request.post(endpoint);
+    	 response = Hooks.request.post(endpoint);
     	
         LoggerLoad.info("Status Code: " + response.getStatusCode());
         LoggerLoad.info("Response Body: " + response.getBody().asPrettyString());

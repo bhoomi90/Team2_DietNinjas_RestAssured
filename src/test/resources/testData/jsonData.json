@@ -32,11 +32,24 @@
 	  	  "HospitalCity": "Sunnyvale",
 	  	  "HospitalStreet": "wolfst",
 	  	  "HospitalPincode": "898965",
-	  	  "DateOfBirth": "1973-05-16T17:50:00.760Z",
-	  	  "ContactNumber": "9894026287",
+	  	  "DateOfBirth": "1974-05-16T17:50:00.760Z",
+	  	  "ContactNumber": "9894026288",
 	  	  "Education": "DPD",
-	  	  "Email": "saro28@gmail.com"
+	  	  "Email": "saro29@gmail.com"
 	       }
      }
-   ]
+   ],
+   "dieticianGetallTests":[
+		{
+			"testCaseId": "GetAllDT_001",
+			"scenario": "Check admin able to retrieve all dietician",
+			"module": "GetAllDietician",
+			"method" : "GET",
+			"endpoints": "/dietician",
+			"expectedStatusCode": 200,
+			"expectedStatusLineMsg": "OK",
+		    "typeOfTesting": "Positive"
+				  
+		}
+    ]
 }
