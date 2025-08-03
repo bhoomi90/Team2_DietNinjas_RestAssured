@@ -1,7 +1,7 @@
 @morbidity
 
 Feature: GET all morbidities
-  @test1
+  @Morbidity_test1
   Scenario Outline: Check dietician able to retrieve all morbidities details
     Given Dietician create a request for morbidity with no auth
     When  Dietician send GET http request with endpoint for morbidity
@@ -10,7 +10,7 @@ Feature: GET all morbidities
     |statusCode|
     |401       |
 
-  @test2
+  @Morbidity_test2
   Scenario Outline: Check patient is able to retrieve all morbidities details
     Given Login as a user with username "<userName>" and password "<passWord>"
     And Patient create a request for morbidity with patient token
@@ -20,7 +20,7 @@ Feature: GET all morbidities
     |userName|passWord|statusCode|
     |  AAA   |AAA  |403       |
 
-  @test3
+  @Morbidity_test3
   Scenario Outline: Check admin able to retrieve all morbidities details
     Given Admin create a request for morbidity with admin token
     When Admin send GET http request with endpoint for morbidity
@@ -29,7 +29,7 @@ Feature: GET all morbidities
     |statusCode|
     |200       |
 
-  @test4
+  @Morbidity_test4
   Scenario Outline: Check admin able to retrieve all morbidities details with invalid method
     Given Admin create a request for morbidity with admin token
     When Admin send POST http request with endpoint for morbidity
@@ -37,7 +37,7 @@ Feature: GET all morbidities
     Examples:
     |statusCode|
 
-  @test5
+  @Morbidity_test5
   Scenario Outline: Check admin able to retrieve all morbidities details with invalid endpoint
     Given Admin create a request for morbidity with admin token
     When Admin send GET http request with invalid endpoint for morbidity
@@ -45,7 +45,7 @@ Feature: GET all morbidities
     Examples:
     |statusCode|
 
-  @test6
+  @Morbidity_test6
   Scenario Outline: Check dietician able to retrieve all morbidities details
     Given Dietician create a request for morbidity with dietician token
     When Dietician send GET http request with endpoint for morbidity
@@ -54,7 +54,7 @@ Feature: GET all morbidities
     |statusCode|
 
 
-  @test7
+  @Morbidity_test7
   Scenario Outline: Check dietician able to retrieve all morbidities details with invalid method
     Given Dietician create a request for morbidity with dietician token
     When Dietician send POST http request with endpoint for morbidity
@@ -62,7 +62,7 @@ Feature: GET all morbidities
     Examples:
     |statusCode|
 
-  @test8
+  @Morbidity_test8
   Scenario Outline: Check dietician able to retrieve all morbidities details with invalid endpoint
     Given Dietician create a request for morbidity with dietician token
     When Dietician send POST http request with endpoint for morbidity

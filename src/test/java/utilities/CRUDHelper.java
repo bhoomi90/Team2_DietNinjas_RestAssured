@@ -15,6 +15,6 @@ public class CRUDHelper {
 
     public static RequestSpecification getRequestWithPatientToken(){
 
-        return;
+
     }
 }
