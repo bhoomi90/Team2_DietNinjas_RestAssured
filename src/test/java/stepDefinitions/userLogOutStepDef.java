@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 import utilities.JSONDataReader;
 import utilities.apiTextContext;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.*;    
 
 public class userLogOutStepDef {
 	
