@@ -8,8 +8,9 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import utilities.CRUDHelper;
+import utilities.apiTextContext;
 
-public class morbidityStepsDef {
+public class MorbidityStepsDef {
     RequestSpecification request;
     Response response;
 
@@ -27,8 +28,7 @@ public class morbidityStepsDef {
 
     @And("Patient create a request for morbidity with patient token")
     public void patientCreateARequestForMorbidityWithPatientToken() {
-
-
+        request = CRUDHelper.getRequestWithToken(apiTextContext.patientToken);
     }
 
     @When("Patient send GET http request with endpoint for morbidity")
@@ -80,12 +80,6 @@ public class morbidityStepsDef {
     public void dieticianSendPOSTHttpRequestWithEndpointForMorbidity() {
     }
 
-
-    @Then("Dietician receives with status code {int}")
-    public void dieticianReceivesWithStatusCodeStatusCode() {
-    }
-
-
     @Then("Admin receives with status code {int} with details of the patient id")
     public void adminReceivesWithStatusCodeStatusCodeWithDetailsOfThePatientId() {
 
@@ -99,8 +93,8 @@ public class morbidityStepsDef {
           Assert.assertEquals(actualStatusCode, expectedStatusCode);
     }
 
-    @Given("Login as a user with username {string} and password {string}")
-    public void loginAsAUserWithUsernameAndPassword() {
-
+    @Given("Login as a user with patient login information as in {string}")
+    public void loginAsAUserWithPatientLoginInformationAsIn(String testCaseId) {
+        CRUDHelper.loginWith(testCaseId);
     }
 }

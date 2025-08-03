@@ -11,14 +11,14 @@ Feature: GET all morbidities
     |401       |
 
   @Morbidity_test2
-  Scenario Outline: Check patient is able to retrieve all morbidities details
-    Given Login as a user with username "<userName>" and password "<passWord>"
+  Scenario Outline: Check if patient is able to retrieve all morbidities details
+    Given Login as a user with patient login information as in "<testCaseId>"
     And Patient create a request for morbidity with patient token
     When Patient send GET http request with endpoint for morbidity
     Then Patient receives with status code <statusCode>
     Examples:
-    |userName|passWord|statusCode|
-    |  AAA   |AAA  |403       |
+    |testCaseId|statusCode|
+    |MT_001  |403       |
 
   @Morbidity_test3
   Scenario Outline: Check admin able to retrieve all morbidities details
