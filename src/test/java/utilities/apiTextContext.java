@@ -9,6 +9,6 @@ public class apiTextContext {
 	    public static Response response;
 	    public static String authToken;
 		public static String dieticianToken;
-		public static String patientToken;    
+		public static String patientToken;       
 	
 }

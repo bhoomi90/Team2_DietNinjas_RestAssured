@@ -63,7 +63,7 @@ public void user_creates_post_request_with_request_body_request_body_userlogin_a
     	apiTextContext.response.prettyPrint();  
         // Validate status code
         assertEquals(apiTextContext.response.getStatusCode(), expectedStatusCode.intValue(), "Status code mismatch");
-
+  
         // Validate status line 
         String expectedStatusLine = "HTTP/1.1 " + expectedStatusCode + " " + Hooks.currentLoginTest.getExpectedStatusLineMsg();
         assertEquals(apiTextContext.response.getStatusLine(), expectedStatusLine, "Status line mismatch");
