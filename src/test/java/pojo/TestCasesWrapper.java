@@ -6,6 +6,7 @@ public class TestCasesWrapper {
     private List<TestCaseData> loginTests;
     private List<TestCaseData> dieticianTests;
     private List<TestCaseData> dieticianGetallTests;
+    private List<TestCaseData> logoutTests;
 
     public List<TestCaseData> getLoginTests() {
         return loginTests;
@@ -22,7 +23,7 @@ public class TestCasesWrapper {
 	public void setDieticianTests(List<TestCaseData> dieticianTests) {
 		this.dieticianTests = dieticianTests;
 	}
-
+	
 	public List<TestCaseData> getDieticianGetallTests() {
 		return dieticianGetallTests;
 	}
@@ -31,4 +32,12 @@ public class TestCasesWrapper {
 		this.dieticianGetallTests = dieticianGetallTests;
 	}
 
-    }
+	public List<TestCaseData> getLogoutTests() {
+		return logoutTests;
+	}
+
+	public void setLogoutTests(List<TestCaseData> logoutTests) {
+		this.logoutTests = logoutTests;
+	}
+
+}

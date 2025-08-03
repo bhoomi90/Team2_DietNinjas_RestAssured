@@ -17,5 +17,4 @@ public class loginData {
 	public void setUserLoginEmail(String userLoginEmail) {
 		this.userLoginEmail = userLoginEmail;
 	}
-	
 }

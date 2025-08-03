@@ -12,6 +12,10 @@ public class TestCaseData {
 	private String typeOfTesting;
 	private loginData loginInputdata;
 	private dieticianData dieticianInputdata;
+
+	private loginData dieticianloginInputdata;
+	private loginData patientloginInputdata;
+
 	
 	// Getters and Setters
 	public String getTestCaseId() {
@@ -75,6 +79,18 @@ public class TestCaseData {
 		this.dieticianInputdata = dieticianInputdata;
 	}
 
-	
+	public loginData getDieticianloginInputdata() {
+		return dieticianloginInputdata;
+	}
+	public void setDieticianloginInputdata(loginData dieticianloginInputdata) {
+		this.dieticianloginInputdata = dieticianloginInputdata;
+	}
+	public loginData getPatientloginInputdata() {
+		return patientloginInputdata;
+	}
+	public void setPatientloginInputdata(loginData patientloginInputdata) {
+		this.patientloginInputdata = patientloginInputdata;
+	}
 
 }
+
