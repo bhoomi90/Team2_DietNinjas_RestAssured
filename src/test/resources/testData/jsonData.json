@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-[
-	{
-	  
-	  "userLoginEmail": "Team601@gmail.com",
-	  "password": "test",
-	  "endpoint" : "/login"
-	},
-	{
-		"endpoint" : "/login",
-		"userLoginEmail": "Team601@gmail.com",
-		 "password": " "
-	},
-	{
-		"endpoint" : "/login",
-		"userLoginEmail": "Team601@gmail.com",
-		"password": "test"	
-	},
-	{
-		"endpoint" : "/log",
-		"userLoginEmail": "Team601@gmail.com",
-		"password": "test"	
-	}
-]
-=======
 {
   "loginTests": [
     {
@@ -65,4 +40,3 @@
      }
    ]
 }
->>>>>>> 18f97eed195a6f4998496c416fe012f725febc51
