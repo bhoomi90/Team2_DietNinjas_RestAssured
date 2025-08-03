@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="13" passed="11" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-02T21:41:36 CDT" name="Default suite" finished-at="2025-08-02T21:41:43 CDT" duration-ms="6539">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-08-02T21:41:36 CDT" name="Default test" finished-at="2025-08-02T21:41:43 CDT" duration-ms="6539">
+      <class name="runner.testRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:36 CDT" name="setUpClass" finished-at="2025-08-02T21:41:37 CDT" duration-ms="523" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5fa9247b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:37 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:39 CDT" duration-ms="2321" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check user able to login as admin with valid data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User login post request"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:39 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:39 CDT" duration-ms="398" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check user able to login as admin with invalid credential"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User login post request"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:39 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:40 CDT" duration-ms="336" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check user able to login as admin with valid credential and invalid method"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User login post request"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:40 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:40 CDT" duration-ms="282" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check user able to login as admin with valid credential and invalid endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User login post request"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:40 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:40 CDT" duration-ms="286" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check user able to login as admin with valid credential and invalid content type"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User login post request"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:40 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:41 CDT" duration-ms="382" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check user able to login as patient with valid credential"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User login post request"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:41 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:41 CDT" duration-ms="372" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check user able to login as patient with invalid credential"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User login post request"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:41 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:41 CDT" duration-ms="287" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check admin able to logout"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User login post request"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:41 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:41 CDT" duration-ms="283" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check dietician able to logout"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User login post request"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:41 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:42 CDT" duration-ms="272" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check patient able to logout"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User login post request"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:42 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:42 CDT" duration-ms="17" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check admin able to create dietician with valid data and token"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Post Request for Dietician Module"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Token not set from login. Make sure login scenario runs before this.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Token not set from login. Make sure login scenario runs before this.
+at stepDefinitions.DieticianStepDef.set_admin_bearer_token(DieticianStepDef.java:30)
+at ✽.Set admin bearer token(file:///C:/Users/rakhy/eclipse-workspace-new/Team2_DietNinjas_RestAssured/src/test/resources/features/02POST_createDietician.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:42 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:42 CDT" duration-ms="297" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check user able to login as dietician with valid credential"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["dietician login"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status code mismatch expected [200] but found [401]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status code mismatch expected [200] but found [401]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at stepDefinitions.userLoginStepDef.user_recieves_created_with_response_body(userLoginStepDef.java:68)
+at ✽.User recieves 200 created with response body(file:///C:/Users/rakhy/eclipse-workspace-new/Team2_DietNinjas_RestAssured/src/test/resources/features/03DieticianLogin/DieticianLogin.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:42 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-02T21:41:42 CDT" duration-ms="431" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check user able to login as dietician with invalid credential"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["dietician login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.testRunner@2a5c8d3f]" started-at="2025-08-02T21:41:42 CDT" name="tearDownClass" finished-at="2025-08-02T21:41:43 CDT" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.testRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,87 @@
+[INFO ]2025-08-0221:41:37.359[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:37.482[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:37.482[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [WARN ]2025-08-0221:41:39.318[main]utilities.LoggerLoad1)-Unrecognized role: [ROLE_ADMIN]
+   [INFO ]2025-08-0221:41:39.319[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:39.337[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:39.342[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:39.343[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:39.344[main]utilities.LoggerLoad1)-Sent a post request with invalid inputs
+   [INFO ]2025-08-0221:41:39.344[main]utilities.LoggerLoad1)-Loaded Login Test Case: Check user able to login as admin with invalid credential
+   [INFO ]2025-08-0221:41:39.703[main]utilities.LoggerLoad1)-validate response body
+   [INFO ]2025-08-0221:41:39.728[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:39.735[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:39.742[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:39.742[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:39.745[main]utilities.LoggerLoad1)-Sent a post request with invalid inputs
+   [INFO ]2025-08-0221:41:39.745[main]utilities.LoggerLoad1)-Loaded Login Test Case: Check user able to login as admin with valid credential and invalid method
+   [INFO ]2025-08-0221:41:40.063[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:40.071[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:40.076[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:40.076[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:40.081[main]utilities.LoggerLoad1)-Sent a post request with invalid endpoint
+   [INFO ]2025-08-0221:41:40.081[main]utilities.LoggerLoad1)-Loaded Login Test Case:  Check user able to login as admin with valid credential and invalid endpoint
+   [INFO ]2025-08-0221:41:40.344[main]utilities.LoggerLoad1)-validate response body
+   [INFO ]2025-08-0221:41:40.346[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:40.353[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:40.359[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:40.359[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:40.360[main]utilities.LoggerLoad1)-Sent a post request with invalid content type
+   [INFO ]2025-08-0221:41:40.360[main]utilities.LoggerLoad1)-Loaded Login Test Case: Check user able to login as admin with valid credential and invalid content type
+   [INFO ]2025-08-0221:41:40.634[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:40.639[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:40.643[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:40.643[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:40.644[main]utilities.LoggerLoad1)-Sent a post request with invalid dietician credentials
+   [INFO ]2025-08-0221:41:40.645[main]utilities.LoggerLoad1)-Loaded Login Test Case: Check user able to login as patient with valid credential
+   [WARN ]2025-08-0221:41:41.016[main]utilities.LoggerLoad1)-Unrecognized role: [ROLE_PATIENT]
+   [INFO ]2025-08-0221:41:41.017[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:41.022[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:41.026[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:41.027[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:41.028[main]utilities.LoggerLoad1)-Sent a post request with invalid patient credentials
+   [INFO ]2025-08-0221:41:41.028[main]utilities.LoggerLoad1)-Loaded Login Test Case: Check user able to login as patient with invalid credential
+   [INFO ]2025-08-0221:41:41.384[main]utilities.LoggerLoad1)-validate response body
+   [INFO ]2025-08-0221:41:41.388[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:41.398[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:41.403[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:41.403[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:41.404[main]utilities.LoggerLoad1)-Sent a post request with No authorization
+   [INFO ]2025-08-0221:41:41.405[main]utilities.LoggerLoad1)-Loaded Login Test Case: Check admin able to logout 
+   [INFO ]2025-08-0221:41:41.673[main]utilities.LoggerLoad1)-validate response body
+   [INFO ]2025-08-0221:41:41.676[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:41.688[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:41.691[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:41.692[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:41.694[main]utilities.LoggerLoad1)-Sent a post request with No authorization
+   [INFO ]2025-08-0221:41:41.694[main]utilities.LoggerLoad1)-Loaded Login Test Case: Check admin able to logout 
+   [INFO ]2025-08-0221:41:41.959[main]utilities.LoggerLoad1)-validate response body
+   [INFO ]2025-08-0221:41:41.963[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:41.972[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:41.974[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:41.974[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:41.976[main]utilities.LoggerLoad1)-Sent a post request with No authorization
+   [INFO ]2025-08-0221:41:41.976[main]utilities.LoggerLoad1)-Loaded Login Test Case: Check admin able to logout 
+   [INFO ]2025-08-0221:41:42.236[main]utilities.LoggerLoad1)-validate response body
+   [INFO ]2025-08-0221:41:42.237[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:42.244[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:42.246[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:42.246[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:42.254[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:42.263[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:42.266[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:42.266[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:42.267[main]utilities.LoggerLoad1)-Sent a post request with valid dietician credentials
+   [INFO ]2025-08-0221:41:42.267[main]utilities.LoggerLoad1)-Loaded Login Test Case: Check user able to login as dietician with valid credential
+   [INFO ]2025-08-0221:41:42.267[main]utilities.LoggerLoad1)-Overriding email and password with captured values:
+   [INFO ]2025-08-0221:41:42.268[main]utilities.LoggerLoad1)-Email: null
+   [INFO ]2025-08-0221:41:42.268[main]utilities.LoggerLoad1)-Password: null
+   [INFO ]2025-08-0221:41:42.555[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   [INFO ]2025-08-0221:41:42.561[main]stepDefinitions.Hooks1)-Base URL loaded: https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician
+   [INFO ]2025-08-0221:41:42.564[main]stepDefinitions.Hooks1)-All test data loaded
+   [INFO ]2025-08-0221:41:42.564[main]stepDefinitions.Hooks1)-Loaded Login Test Case: Check user able to login as admin with valid data
+   [INFO ]2025-08-0221:41:42.565[main]utilities.LoggerLoad1)-Sent a post request with valid patient credentials
+   [INFO ]2025-08-0221:41:42.565[main]utilities.LoggerLoad1)-Loaded Login Test Case: Check user able to login as dietician with invalid credential
+   [INFO ]2025-08-0221:41:42.983[main]utilities.LoggerLoad1)-validate response body
+   [INFO ]2025-08-0221:41:42.985[main]stepDefinitions.Hooks1)-Cleaning up after scenario...
+   
