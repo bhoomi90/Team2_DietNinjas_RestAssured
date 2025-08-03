@@ -22,7 +22,7 @@ import pojo.PatientTestData;
 import pojo.VitalsPojo;
 import utilities.configReader;
 
-public class createPatientStepsDef {
+public class CreatePatientStepsDef {
 
 	List<PatientTestData> patientDataList;
 	//PatientPojo patientPojo;
@@ -99,7 +99,7 @@ public class createPatientStepsDef {
 	    			
 	    	    request = given()
 	    	    	.baseUri(configReader.getProperty("baseURL"))
-	    	    	.header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNjAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDEwNDc4MSwiZXhwIjoxNzU0MTMzNTgxfQ.A6JQ4r9zDn5rjbfDrocr39jQul8msY7oKWqOKNDaIYRSCpUkfao5RFIKcZGjp0bcdEMNXEfA6Nm2G5r16muhCw")
+	    	    	.header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNjAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDE3NzgxOCwiZXhwIjoxNzU0MjA2NjE4fQ.h5MogfU8AzzQGMhF5WE0qZ7_B6TOaYjLdslzTCcixlA0873d2lyZfx9QStXJJQoZeyofWA_0rAX1yAgg33YJpg")
 	    	    	.contentType(ContentType.MULTIPART)
 	    	   		.multiPart("patientInfo", patientInfoJson)
 	    	   		.multiPart("file", file, "application/pdf")
