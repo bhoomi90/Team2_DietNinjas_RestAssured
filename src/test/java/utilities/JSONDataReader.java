@@ -22,8 +22,6 @@ import pojo.TestCasesWrapper;
 
 public class JSONDataReader {
 
-	    public static TestCasesWrapper readAllModules(String filePath) {
-	
 	 public static TestCasesWrapper readAllModules(String filePath) {
 	        ObjectMapper mapper = new ObjectMapper();
 	        try {
