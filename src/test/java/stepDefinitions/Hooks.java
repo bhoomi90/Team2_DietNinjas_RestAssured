@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import io.cucumber.java.Before;
+import io.restassured.specification.RequestSpecification;
 import pojo.TestCaseData;
 import pojo.TestCasesWrapper;
 import io.cucumber.java.After;
@@ -16,6 +17,12 @@ public class Hooks {
     public static String baseUrl;
     public static TestCasesWrapper allTestData;
     public static TestCaseData currentLoginTest;
+    public static String token;
+    public static RequestSpecification request;
+    public static String dieticianId;       //<-- save id and loginpassword
+    public static String dieticianLoginPwd; 
+    public static String dieticianEmail;
+
 
     @Before(order = 0)
     public void setup() {
@@ -39,4 +46,3 @@ public class Hooks {
         // Add cleanup steps if needed 
     }
 }
-

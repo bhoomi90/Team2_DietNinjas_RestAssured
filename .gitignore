@@ -1,4 +1,5 @@
 /target/
+.idea/
 /logs/
 /test-output/
 .classpath
