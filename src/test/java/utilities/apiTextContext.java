@@ -7,6 +7,8 @@ public class apiTextContext {
 	
 	    public static RequestSpecification request;
 	    public static Response response;
-		public static RequestSpecification requestSpec;
+	    public static String authToken;
+		public static String dieticianToken;
+		public static String patientToken;
 	
 }

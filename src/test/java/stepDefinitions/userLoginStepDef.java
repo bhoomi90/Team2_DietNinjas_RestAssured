@@ -28,10 +28,7 @@ public class userLoginStepDef {
 	public String endpoint;
 	private TestCaseData loginTestCase;
 	private Object currentLoginTest;
-	public static String authToken;
-	public static String dieticianToken;
-	public static String patientToken;
-	 private loginData loginInputData; 
+	private loginData loginInputData; 
 	 private loginData DieticianloginInputdata;
 	 private loginData PatientloginInputdata;
 
@@ -73,23 +70,23 @@ public void user_creates_post_request_with_request_body_request_body_userlogin_a
         
         if (apiTextContext.response.getStatusCode() == 200) {
             
-            String role = apiTextContext.response.jsonPath().getString("roles");
+            String role = apiTextContext.response.jsonPath().getString("roles[0]");
             String token = apiTextContext.response.jsonPath().getString("token");
 
             switch (role) {
                 case "ROLE_DIETICIAN":
-                    dieticianToken = token;
-                    LoggerLoad.info("Token saved for ROLE_DIETICIAN: " + dieticianToken);
+                    apiTextContext.dieticianToken = token;
+                    LoggerLoad.info("Token saved for ROLE_DIETICIAN: " + apiTextContext.dieticianToken);
                     break;
 
                 case "ROLE_ADMIN":
-                    authToken = token;
-                    LoggerLoad.info("Token saved for ROLE_ADMIN: " + authToken);
+                   apiTextContext.authToken = token;
+                    LoggerLoad.info("Token saved for ROLE_ADMIN: " + apiTextContext.authToken);
                     break;
 
                 case "ROLE_PATIENT":
-                    patientToken = token;
-                    LoggerLoad.info("Token saved for ROLE_PATIENT: " + patientToken);
+                    apiTextContext.patientToken = token;
+                    LoggerLoad.info("Token saved for ROLE_PATIENT: " + apiTextContext.patientToken);
                     break;
 
                 default:
