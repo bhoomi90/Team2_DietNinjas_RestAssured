@@ -19,6 +19,10 @@ public class Hooks {
     public static TestCaseData currentLoginTest;
     public static String token;
     public static RequestSpecification request;
+    public static String dieticianId;       //<-- save id and loginpassword
+    public static String dieticianLoginPwd; 
+    public static String dieticianEmail;
+
 
     @Before(order = 0)
     public void setup() {
