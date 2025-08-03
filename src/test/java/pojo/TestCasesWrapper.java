@@ -5,6 +5,7 @@ import java.util.List;
 public class TestCasesWrapper {
     private List<TestCaseData> loginTests;
     private List<TestCaseData> dieticianTests;
+    private List<TestCaseData> dieticianGetallTests;
 
     public List<TestCaseData> getLoginTests() {
         return loginTests;
@@ -20,6 +21,14 @@ public class TestCasesWrapper {
 
 	public void setDieticianTests(List<TestCaseData> dieticianTests) {
 		this.dieticianTests = dieticianTests;
+	}
+
+	public List<TestCaseData> getDieticianGetallTests() {
+		return dieticianGetallTests;
+	}
+
+	public void setDieticianGetallTests(List<TestCaseData> dieticianGetallTests) {
+		this.dieticianGetallTests = dieticianGetallTests;
 	}
 
     }
