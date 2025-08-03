@@ -1,20 +1,215 @@
 {
-  "loginTests": [
-    {
-      "testCaseId": "LT_001",
-      "scenario": "Check user able to login as admin with valid data",
-      "module": "Login",
-      "method": "POST",
-      "endpoints": "/login",
-      "expectedStatusCode": 200,
-      "expectedStatusLineMsg": "OK",
-      "typeOfTesting": "Positive",
-      "loginInputdata": {
-		"password": "test",
-        "userLoginEmail":"Team601@gmail.com"       
-      }
-    }
-  ]	, 
+	"loginTests": [
+		{
+			"testCaseId": "LT_001",
+			"scenario": "Check user able to login as admin with valid data",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/login",
+			"expectedStatusCode": 200,
+			"expectedStatusLineMsg": "OK",
+			"typeOfTesting": "Positive",
+			"loginInputdata": {
+				"password": "test",
+				"userLoginEmail": "Team601@gmail.com"
+			}
+		},
+		{
+			"testCaseId": "LT_002",
+			"scenario": "Check user able to login as admin with invalid credential",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/login",
+			"expectedStatusCode": 401,
+			"expectedStatusLineMsg": "Unauthorized",
+			"typeOfTesting": "Positive",
+			"loginInputdata": {
+				"password": " ",
+				"userLoginEmail": "Team601@gmail.com"
+			}
+		},
+		{
+			"testCaseId": "LT_003",
+			"scenario": "Check user able to login as admin with valid credential and invalid method",
+			"module": "Login",
+			"method": "GET",
+			"endpoints": "/login",
+			"expectedStatusCode": 405,
+			"expectedStatusLineMsg": "Method Not Allowed",
+			"typeOfTesting": "Positive",
+			"loginInputdata": {
+				"password": "test",
+				"userLoginEmail": "Team601@gmail.com"
+			}
+		},
+		{
+			"testCaseId": "LT_004",
+			"scenario": " Check user able to login as admin with valid credential and invalid endpoint",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/log",
+			"expectedStatusCode": 401,
+			"expectedStatusLineMsg": "Unauthorized",
+			"typeOfTesting": "Negative",
+			"loginInputdata": {
+				"password": "test",
+				"userLoginEmail": "Team601@gmail.com"
+			}
+		},
+		{
+			"testCaseId": "LT_005",
+			"scenario": "Check user able to login as admin with valid credential and invalid content type",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/login",
+			"expectedStatusCode": 415,
+			"expectedStatusLineMsg": "Unsupported Media Type",
+			"typeOfTesting": "Negative",
+			"loginInputdata": {
+				"password": "test",
+				"userLoginEmail": "Team601@gmail.com"
+			}
+		},
+		{
+			"testCaseId": "LT_006",
+			"scenario": "Check user able to login as dietician with valid credential",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/login",
+			"expectedStatusCode": 200,
+			"expectedStatusLineMsg": "OK",
+			"typeOfTesting": "Positive",
+			"dieticianloginInputdata": {
+				"password": "Build33",
+				"userLoginEmail": "testDiet@gmail.com"
+			}
+		},
+		{
+			"testCaseId": "LT_007",
+			"scenario": "Check user able to login as dietician with invalid credential",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/login",
+			"expectedStatusCode": 401,
+			"expectedStatusLineMsg": "Unauthorized",
+			"typeOfTesting": "Negative",
+			"dieticianloginInputdata": {
+				"password": "",
+				"userLoginEmail": "testDietgmail.com"
+			}
+		},
+		{
+			"testCaseId": "LT_008",
+			"scenario": "Check user able to login as patient with valid credential",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/login",
+			"expectedStatusCode": 200,
+			"expectedStatusLineMsg": "OK",
+			"typeOfTesting": "Positive",
+			"patientloginInputdata": {
+				"password": "test",
+				"userLoginEmail": "diettest@test.com"
+			}
+		},
+		{
+			"testCaseId": "LT_009",
+			"scenario": "Check user able to login as patient with invalid credential",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/login",
+			"expectedStatusCode": 401,
+			"expectedStatusLineMsg": "Unauthorized",
+			"typeOfTesting": "Negative",
+			"patientloginInputdata": {
+				"password": "test",
+				"userLoginEmail": "test123.com"
+			}
+		}
+	],
+	"logoutTests": [
+		{
+			"testCaseId": "LOT_001",
+			"scenario": "Check admin able to logout ",
+			"module": "Login",
+			"method": "GET",
+			"endpoints": "/logoutdietician",
+			"expectedStatusCode": 401,
+			"expectedStatusLineMsg": "Unauthorized"
+		},
+		{
+			"testCaseId": "LOT_002",
+			"scenario": " Check dietician able to logout  ",
+			"module": "Login",
+			"method": "GET",
+			"endpoints": "/logoutdietician",
+			"expectedStatusCode": 401,
+			"expectedStatusLineMsg": "Unauthorized"
+		},
+		{
+			"testCaseId": "LOT_003",
+			"scenario": "Check patient able to logout  ",
+			"module": "Login",
+			"method": "GET",
+			"endpoints": "/logoutdietician",
+			"expectedStatusCode": 401,
+			"expectedStatusLineMsg": "Unauthorized"
+		},
+		{
+			"testCaseId": "LOT_004",
+			"scenario": "Check admin able to logout",
+			"module": "Login",
+			"method": "GET",
+			"endpoints": "/logoutdietician",
+			"expectedStatusCode": 200,
+			"expectedStatusLineMsg": "OK"
+		},
+		{
+			"testCaseId": "LOT_005",
+			"scenario": "Check admin able to logout  with invalid method",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/logoutdietician",
+			"expectedStatusCode": 405,
+			"expectedStatusLineMsg": "Method Not Allowed"
+		},
+		{
+			"testCaseId": "LOT_006",
+			"scenario": "Check dietician able to logout",
+			"module": "Login",
+			"method": "GET",
+			"endpoints": "/logoutdietician",
+			"expectedStatusCode": 200,
+			"expectedStatusLineMsg": "OK"
+		},
+		{
+			"testCaseId": "LOT_007",
+			"scenario": "Check dietician able to logout  with invalid method",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/logoutdietician",
+			"expectedStatusCode": 405,
+			"expectedStatusLineMsg": "Method Not Allowed"
+		},
+		{
+			"testCaseId": "LOT_008",
+			"scenario": "Check patient able to logout",
+			"module": "Login",
+			"method": "GET",
+			"endpoints": "/logoutdietician",
+			"expectedStatusCode": 200,
+			"expectedStatusLineMsg": "OK"
+		},
+		{
+			"testCaseId": "LOT_008",
+			"scenario": "Check atient able to logout  with invalid method",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/logoutdietician",
+			"expectedStatusCode": 405,
+			"expectedStatusLineMsg": "Method Not Allowed"
+		}
+	],
    "dieticianTests": [
 	   {
 	  	"testCaseId": "DT_001",

@@ -11,6 +11,7 @@ import pojo.TestCaseData;
 import pojo.dieticianData;
 import utilities.JSONDataReader;
 import utilities.LoggerLoad;
+import utilities.apiTextContext;
 
 public class DieticianStepDef {
 
@@ -25,7 +26,8 @@ public class DieticianStepDef {
     @Given("Set admin bearer token")
     public void set_admin_bearer_token() {
         // Use bearer token from login
-        String token = UserLoginStepDef.authToken;
+
+        String token = apiTextContext.authToken;  
         if (token == null || token.isEmpty()) {
             throw new RuntimeException("Token not set from login. Make sure login scenario runs before this.");
         }
@@ -37,6 +39,7 @@ public class DieticianStepDef {
                 .header("Content-Type", "application/json");
 
         Hooks.request = request; // You should set it here so other step classes can use it
+
         		
     }
 
@@ -44,9 +47,10 @@ public class DieticianStepDef {
     public void admin_creates_post_request_with_valid_data() {
        
     	// Load current dietician test data
-    	dieticianTestCase = JSONDataReader.getTestCaseById(Hooks.allTestData.getDieticianTests(), "DT_001");
-        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianTestCase.getScenario());
 
+        dieticianTestCase = JSONDataReader.getTestCaseById(Hooks.allTestData.getDieticianTests(), "DT_001");
+        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianTestCase.getScenario());
+        
         // Get input data
         dieticianInputdata = dieticianTestCase.getDieticianInputdata();
         LoggerLoad.info("Loaded Dietician Test Case: " + dieticianInputdata);
@@ -54,6 +58,9 @@ public class DieticianStepDef {
         Hooks.request = Hooks.request.body(dieticianInputdata);
         Hooks.request.log().all();
         LoggerLoad.info("Request with body prepared.");
+        request = request.body(dieticianInputdata);
+        request.log().all();
+        LoggerLoad.info("Loaded request:" + request);
     }
 
     @When("Admin send POST http request with endpoint")
@@ -63,6 +70,7 @@ public class DieticianStepDef {
     	String endpoint = dieticianTestCase.getEndpoints();
     	 LoggerLoad.info("Endpoint: " + endpoint);
     	 response = Hooks.request.post(endpoint);
+    	response= request.post(endpoint);
     	
         LoggerLoad.info("Status Code: " + response.getStatusCode());
         LoggerLoad.info("Response Body: " + response.getBody().asPrettyString());
