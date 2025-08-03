@@ -23,7 +23,7 @@ import utilities.LoggerLoad;
 import utilities.apiTextContext;
 import utilities.configReader;
 
-public class userLoginStepDef {
+public class UserLoginStepDef {
 	
 	public String endpoint;
 	private TestCaseData loginTestCase;

@@ -125,6 +125,20 @@
 				"password": "test",
 				"userLoginEmail": "test123.com"
 			}
+		},
+		{
+			"testCaseId": "MT_001",
+			"scenario": "Check if patient is able to retrieve all morbidities details",
+			"module": "Login",
+			"method": "POST",
+			"endpoints": "/login",
+			"expectedStatusCode": 200,
+			"expectedStatusLineMsg": "OK",
+			"typeOfTesting": "Positive",
+			"loginInputdata": {
+				"password": "test",
+				"userLoginEmail": "namo@yahoo.co.in"
+			}
 		}
 	],
 	"logoutTests": [
