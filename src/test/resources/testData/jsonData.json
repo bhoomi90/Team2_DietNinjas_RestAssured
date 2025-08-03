@@ -246,5 +246,55 @@
 		    "typeOfTesting": "Positive"
 				  
 		}
-    ]
+    ],
+	"dieticianGetIdTests":[
+			{
+				"testCaseId": "GetById_DT_001",
+				"scenario": "Check admin able to retrieve dietician by ID",
+				"module": "GetDieticianbyID",
+				"method" : "GET",
+				"endpoints": "/dietician/{dieticianId}",
+				"expectedStatusCode": 200,
+				"expectedStatusLineMsg": "OK",
+			    "typeOfTesting": "Positive"
+					  
+			}
+	    ],
+		"updateDieticianTests": [
+			   {
+			  	"testCaseId": "PutDT_001",
+			  	"scenario": "Check admin able to update dietician with valid data , dietician id and token ",
+			      "module": "UpdateDietician",
+			      "method": "PUT",
+			  	"endpoints": "/dietician/{dieticianId}",
+			  	"expectedStatusCode": 200,
+			  	"expectedStatusLineMsg": "OK",
+			  	"typeOfTesting": "Positive",
+			  	"dieticianInputdata": {
+			  	  "Firstname": "Dheekpalz",
+			  	  "Lastname": "Palz",
+			  	  "HospitalName": "SutterHealthGroup",
+			  	  "HospitalCity": "Cupertino",
+			  	  "HospitalStreet": "wolfStreet",
+			  	  "HospitalPincode": "898969",
+			  	  "DateOfBirth": "1975-05-16T17:50:00.760Z",
+			  	  "ContactNumber": "9894026289",
+			  	  "Education": "DPD",
+			  	  "Email": "saro30@gmail.com"
+			       }
+		     }
+		   ],
+		   "deleteDieticianIdTests":[
+		   			{
+		   				"testCaseId": "Delete_DT_001",
+		   				"scenario": "Check admin able to delete dietician by ID ",
+		   				"module": "DeleteDieticianbyID",
+		   				"method" : "DELETE",
+		   				"endpoints": "/dietician/{dieticianId}",
+		   				"expectedStatusCode": 200,
+		   				"expectedStatusLineMsg": "OK",
+		   			    "typeOfTesting": "Positive"
+		   					  
+		   			}
+		   	    ]
 }
