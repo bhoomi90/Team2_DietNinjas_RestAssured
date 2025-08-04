@@ -100,6 +100,170 @@ public class DieticianStepDef {
         	System.out.print("Dietician_Id saved:"+ dieticianEmail);
         	LoggerLoad.info("Dietician_Id Password saved:"+ dieticianEmail);
         	
+        	}
         }
+    
+    @Given("Admin creates POST request only with invalid additional details")
+    public void admin_creates_post_request_only_with_invalid_additional_details() {
+       
+    	// Load current dietician test data
+    	dieticianTestCase = JSONDataReader.getTestCaseById(Hooks.allTestData.getDieticianTests(), "DT_002");
+        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianTestCase.getScenario());
+
+        // Get input data
+        dieticianInputdata = dieticianTestCase.getDieticianInputdata();
+        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianInputdata);
+
+        Hooks.request = Hooks.request.body(dieticianInputdata);
+        Hooks.request.log().all();
+        LoggerLoad.info("Request with body prepared.");
     }
+
+
+    @Then("Admin recieves {int} Bad request")
+    public void admin_recieves_bad_request(Integer expectedStatusCode) {
+    	
+    	response.prettyPrint();
+
+        assertEquals(response.getStatusCode(), expectedStatusCode.intValue(), "Status code mismatch");
+
+        assertTrue(response.getStatusLine().contains(expectedStatusCode.toString()));
+        assertTrue(response.getStatusLine().contains(dieticianTestCase.getExpectedStatusLineMsg()));
+  
+    }
+
+    @Given("Admin creates PUT request only with valid details")
+    public void admin_creates_put_request_only_with_valid_details() {
+       
+    	// Load current dietician test data
+    	dieticianTestCase = JSONDataReader.getTestCaseById(Hooks.allTestData.getDieticianTests(), "DT_003");
+        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianTestCase.getScenario());
+
+        // Get input data
+        dieticianInputdata = dieticianTestCase.getDieticianInputdata();
+        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianInputdata);
+
+        Hooks.request = Hooks.request.body(dieticianInputdata);
+        Hooks.request.log().all();
+        LoggerLoad.info("Request with body prepared.");
+
+    	
+    }
+    
+    @When("Admin send PUT http request with endpoint in create dietician module")
+    public void admin_send_put_http_request_with_endpoint_in_create_dietician_module() {
+      
+    	 
+    	String endpoint = dieticianTestCase.getEndpoints();
+    	 LoggerLoad.info("Endpoint: " + endpoint);
+    	 response = Hooks.request.put(endpoint);          //<---negative testcase method
+    	
+        LoggerLoad.info("Status Code: " + response.getStatusCode());
+        LoggerLoad.info("Response Body: " + response.getBody().asPrettyString());
+    	
+    }
+
+
+    @Then("Admin recieves {int} method not allowed")
+    public void admin_recieves_method_not_allowed(Integer expectedStatusCode) {
+     
+    	response.prettyPrint();
+
+        assertEquals(response.getStatusCode(), expectedStatusCode.intValue(), "Status code mismatch");
+
+        assertTrue(response.getStatusLine().contains(expectedStatusCode.toString()));
+        assertTrue(response.getStatusLine().contains(dieticianTestCase.getExpectedStatusLineMsg()));
+
+    }
+    
+    @Given("Admin creates POST request with valid data in dieticianModule")
+    public void admin_creates_post_request_with_valid_data_in_dietician_module() {
+    	
+    	// Load current dietician test data
+    	dieticianTestCase = JSONDataReader.getTestCaseById(Hooks.allTestData.getDieticianTests(), "DT_004");
+        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianTestCase.getScenario());
+
+        // Get input data
+        dieticianInputdata = dieticianTestCase.getDieticianInputdata();
+        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianInputdata);
+
+        Hooks.request = Hooks.request.body(dieticianInputdata);
+        Hooks.request.log().all();
+        LoggerLoad.info("Request with body prepared.");
+
+    }
+
+    
+    @When("Admin sent POST http request with invalid endpoint")
+    public void admin_sent_post_http_request_with_invalid_endpoint() {
+    	
+    	String endpoint = dieticianTestCase.getEndpoints();
+   	    LoggerLoad.info("Endpoint: " + endpoint);
+   	    response = Hooks.request.post(endpoint);          //<---negative testcase invalid endpoint in jsondata
+   	
+        LoggerLoad.info("Status Code: " + response.getStatusCode());
+        LoggerLoad.info("Response Body: " + response.getBody().asPrettyString());
+      
+    }
+
+    @Then("Admin recieves {int} not found")
+    public void admin_recieves_not_found(Integer expectedStatusCode) {
+       
+    	response.prettyPrint();
+
+        assertEquals(response.getStatusCode(), expectedStatusCode.intValue(), "Status code mismatch");
+
+        assertTrue(response.getStatusLine().contains(expectedStatusCode.toString()));
+        assertTrue(response.getStatusLine().contains(dieticianTestCase.getExpectedStatusLineMsg()));
+
+    }
+
+	
+	@Given("Admin creates POST request with valid data and invalid content type")
+	public void admin_creates_post_request_with_valid_data_and_invalid_content_type() {
+		
+		// Load current dietician test data
+    	dieticianTestCase = JSONDataReader.getTestCaseById(Hooks.allTestData.getDieticianTests(), "DT_005");
+        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianTestCase.getScenario());
+
+        // Get input data
+        dieticianInputdata = dieticianTestCase.getDieticianInputdata();
+        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianInputdata);
+
+        Hooks.request = Hooks.request.body(dieticianInputdata).header("Content-Type", "application/x-www-form-urlencoded");
+        Hooks.request.log().all();
+        LoggerLoad.info("Request with body prepared.");
+
+	 
+	}
+	
+	@Then("Admin recieves {int} unsupported media type")
+	public void admin_recieves_unsupported_media_type(Integer expectedStatusCode) {
+		
+		response.prettyPrint();
+
+        assertEquals(response.getStatusCode(), expectedStatusCode.intValue(), "Status code mismatch");
+
+        assertTrue(response.getStatusLine().contains(expectedStatusCode.toString()));
+        assertTrue(response.getStatusLine().contains(dieticianTestCase.getExpectedStatusLineMsg()));
+	   
+	}
+	
+	@Given("Admin creates POST request only with valid additional details")
+	public void admin_creates_post_request_only_with_valid_additional_details() {
+	   
+		// Load current dietician test data
+    	dieticianTestCase = JSONDataReader.getTestCaseById(Hooks.allTestData.getDieticianTests(), "DT_006");
+        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianTestCase.getScenario());
+
+        // Get input data
+        dieticianInputdata = dieticianTestCase.getDieticianInputdata();
+        LoggerLoad.info("Loaded Dietician Test Case: " + dieticianInputdata);
+
+        Hooks.request = Hooks.request.body(dieticianInputdata);
+        Hooks.request.log().all();
+        LoggerLoad.info("Request with body prepared.");
+	}
+
 }
+    

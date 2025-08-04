@@ -232,7 +232,119 @@
 	  	  "Education": "DPD",
 	  	  "Email": "saro29@gmail.com"
 	       }
-     }
+     },
+	 {
+	   	"testCaseId": "DT_002",
+	   	"scenario": "Check admin able to create dietician with invalid data",
+	       "module": "CreateDietician",
+	       "method": "POST",
+	   	"endpoints": "/dietician",
+	   	"expectedStatusCode": 400,
+	   	"expectedStatusLineMsg": "Bad Request",
+	   	"typeOfTesting": "Negative",
+	   	"dieticianInputdata": {
+	   	  "Firstname": "Navishapalz",
+	   	  "Lastname": "Palz",
+	   	  "HospitalName": "SutterHealth",
+	   	  "HospitalCity": "Sunnyvale",
+	   	  "HospitalStreet": "wolfst",
+	   	  "HospitalPincode": "898965",
+	   	  "DateOfBirth": "1974-05-16T17:50:00.760Z",
+	   	  "ContactNumber": "98940262",
+	   	  "Education": "DPD",
+	   	  "Email": "saro29@gmailcom"
+	        }
+	     },
+		 {
+		 	   	"testCaseId": "DT_003",
+		 	   	"scenario": "Check admin able to create dietician with invalid data",
+		 	       "module": "CreateDietician",
+		 	       "method": "PUT",
+		 	   	"endpoints": "/dietician",
+		 	   	"expectedStatusCode": 405,
+		 	   	"expectedStatusLineMsg": "Method Not Allowed",
+		 	   	"typeOfTesting": "Negative",
+		 	   	"dieticianInputdata": {
+		 	   	  "Firstname": "Navishapalz",
+		 	   	  "Lastname": "Palz",
+		 	   	  "HospitalName": "SutterHealth",
+		 	   	  "HospitalCity": "Sunnyvale",
+		 	   	  "HospitalStreet": "wolfst",
+		 	   	  "HospitalPincode": "898965",
+		 	   	  "DateOfBirth": "1974-05-16T17:50:00.760Z",
+		 	   	  "ContactNumber": "9894026287",
+		 	   	  "Education": "DPD",
+		 	   	  "Email": "saro29@gmail.com"
+		 	        }
+		   },
+		   
+	     {
+			"testCaseId": "DT_004",
+			"scenario": "Check admin able to create dietician with valid data and invalid endpoint",
+		    "module": "CreateDietician",
+			 "method": "POST",
+			 "endpoints": "/diet",
+		   	"expectedStatusCode": 404,
+			 "expectedStatusLineMsg": "Not Found",
+			 "typeOfTesting": "Negative",
+			 "dieticianInputdata": {
+				 "Firstname": "Navishapalz",
+				  "Lastname": "Palz",
+				  "HospitalName": "SutterHealth",
+				  "HospitalCity": "Sunnyvale",
+				  "HospitalStreet": "wolfst",
+				  "HospitalPincode": "898965",
+				  "DateOfBirth": "1974-05-16T17:50:00.760Z",
+				  "ContactNumber": "9894026287",
+			 	  "Education": "DPD",
+			 	  "Email": "saro29@gmail.com"		   
+			    }	  
+		  },
+		  {
+		  		"testCaseId": "DT_005",
+		  		"scenario": "Check admin able to create dietician with valid data and invalid content type",
+		  	    "module": "CreateDietician",
+		  		 "method": "POST",
+		  		 "endpoints": "/dietician",
+		  	   	"expectedStatusCode": 415,
+		  		 "expectedStatusLineMsg": "Unsupported Media Type",
+		  		 "typeOfTesting": "Negative",
+		  		 "dieticianInputdata": {
+		  			 "Firstname": "Navishapalz",
+		  			  "Lastname": "Palz",
+		  			  "HospitalName": "SutterHealth",
+		  			  "HospitalCity": "Sunnyvale",
+		  			  "HospitalStreet": "wolfst",
+		  			  "HospitalPincode": "898965",
+		  			  "DateOfBirth": "1974-05-16T17:50:00.760Z",
+		  			  "ContactNumber": "9894026287",
+		  		 	  "Education": "DPD",
+		  		 	  "Email": "saro29@gmail.com"		   
+		  		    }	  
+	   	 },
+		    {
+		   	"testCaseId": "DT_006",
+		   	"scenario": "Check admin able to create dietician only with valid additional details",
+		       "module": "CreateDietician",
+		       "method": "POST",
+		   	"endpoints": "/dietician",
+		   	"expectedStatusCode": 400,
+		   	"expectedStatusLineMsg": "Bad Request",
+		   	"typeOfTesting": "Negative",
+		   	"dieticianInputdata": {
+		   	  "Firstname": "Navishapalz",
+		   	  "Lastname": "Palz",
+		   	  "HospitalName": "SutterHealth",
+		   	  "HospitalCity": "Sunnyvale",
+		   	  "HospitalStreet": "wolfst",
+		   	  "HospitalPincode": "898965",
+		   	  "DateOfBirth": "1974-05-16T17:50:00.760Z",
+		   	  "ContactNumber": "9894026288",
+		   	  "Education": "DPD",
+		   	  "Email": "saro29@gmail.com"
+		        }
+		   }
+			  
    ],
    "dieticianGetallTests":[
 		{
@@ -245,7 +357,28 @@
 			"expectedStatusLineMsg": "OK",
 		    "typeOfTesting": "Positive"
 				  
-		}
+	},
+	{
+				"testCaseId": "GetAllDT_002",
+				"scenario": "Check admin able to retrieve all dietician with invalid method",
+				"module": "GetAllDietician",
+				"method" : "PUT",
+				"endpoints": "/dietician",
+				"expectedStatusCode": 405,
+				"expectedStatusLineMsg": "Method Not Allowed",
+			    "typeOfTesting": "Negative"			  
+	},
+	{
+					"testCaseId": "GetAllDT_003",
+					"scenario": "Check admin able to retrieve all dietician with invalid endpoint",
+					"module": "GetAllDietician",
+					"method" : "GET",
+					"endpoints": "/dieti",
+					"expectedStatusCode": 404,
+					"expectedStatusLineMsg": "Not Found",
+				    "typeOfTesting": "Negative"			  
+	}
+			
     ],
 	"dieticianGetIdTests":[
 			{
@@ -258,7 +391,40 @@
 				"expectedStatusLineMsg": "OK",
 			    "typeOfTesting": "Positive"
 					  
-			}
+			},
+			{
+				"testCaseId": "GetById_DT_002",
+				"scenario": "Check admin able to retrieve dietician by id with invalid method",
+				"module": "GetDieticianbyID",
+				"method" : "POST",
+				"endpoints": "/dietician/{dieticianId}",
+				"expectedStatusCode": 405,
+				"expectedStatusLineMsg": "Method Not Allowed",
+				"typeOfTesting": "Negative"
+								  
+			},
+			{
+				"testCaseId": "GetById_DT_003",
+				"scenario": "Check admin able to retrieve dietician by invalid id",
+				"module": "GetDieticianbyID",
+				"method" : "GET",
+				"endpoints": "/dietician/0000",
+				"expectedStatusCode": 404,
+				"expectedStatusLineMsg": "Not Found",
+				"typeOfTesting": "Negative"
+											  
+			},
+			{
+				"testCaseId": "GetById_DT_004",
+				"scenario": "Check admin able to retrieve dietician by id with invalid endpoint",
+				"module": "GetDieticianbyID",
+				"method" : "GET",
+				"endpoints": "/dietic",
+				"expectedStatusCode": 404,
+				"expectedStatusLineMsg": "Not Found",
+				"typeOfTesting": "Negative"
+			}				
+			
 	    ],
 		"updateDieticianTests": [
 			   {
@@ -283,6 +449,7 @@
 			  	  "Email": "saro30@gmail.com"
 			       }
 		     }
+			 		 
 		   ],
 		   "deleteDieticianIdTests":[
 		   			{

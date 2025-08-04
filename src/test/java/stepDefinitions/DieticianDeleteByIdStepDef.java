@@ -49,14 +49,11 @@ public class DieticianDeleteByIdStepDef {
 	
 	@Then("Admin recieves {int} ok with details of the dietician id Delete")
 	public void admin_recieves_ok_with_details_of_the_dietician_id_delete(Integer expectedStatusCode) {
-	   
-		response.prettyPrint();
-
+	 
 	     assertEquals(response.getStatusCode(), expectedStatusCode.intValue(), "Status code mismatch");
 	     assertTrue(response.getStatusLine().contains(expectedStatusCode.toString()));
 	     assertTrue(response.getStatusLine().contains(deleteDieticianTestCase.getExpectedStatusLineMsg()));
-	     
-	  
-	}
+	 }
+	
 
 }
