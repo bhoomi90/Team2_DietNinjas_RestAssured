@@ -12,6 +12,7 @@ public class TestCaseData {
 	private String typeOfTesting;
 	private loginData loginInputdata;
 	private dieticianData dieticianInputdata;
+	private dieticianData dieticianLoginInputdata;
 
 	private loginData dieticianloginInputdata;
 	private loginData patientloginInputdata;
@@ -90,6 +91,12 @@ public class TestCaseData {
 	}
 	public void setPatientloginInputdata(loginData patientloginInputdata) {
 		this.patientloginInputdata = patientloginInputdata;
+	}
+	public dieticianData getDieticianLoginInputdata() {
+		return dieticianLoginInputdata;
+	}
+	public void setDieticianLoginInputdata(dieticianData dieticianLoginInputdata) {
+		this.dieticianLoginInputdata = dieticianLoginInputdata;
 	}
 
 }

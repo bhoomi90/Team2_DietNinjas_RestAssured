@@ -27,24 +27,24 @@ public class UserLoginStepDef {
 	
 	public String endpoint;
 	private TestCaseData loginTestCase;
-	private Object currentLoginTest;
 	private loginData loginInputData; 
 	 private loginData DieticianloginInputdata;
 	 private loginData PatientloginInputdata;
 
 	JSONDataReader reader = new JSONDataReader();
-
-	
 	
 
 @Given("User creates Post request with request body.Request body : Userlogin and password")
 public void user_creates_post_request_with_request_body_request_body_userlogin_and_password() {
 
-        // Fetch login data from loaded JSON test case
-    	loginTestCase = Hooks.currentLoginTest;
+	  // Optionally, load a specific test case if required globally
+	Hooks.currentLoginTest = JSONDataReader.getTestCaseById(Hooks.allTestData.getLoginTests(), "LT_001");
+	LoggerLoad.info("Loaded Login Test Case: " + Hooks.currentLoginTest.getScenario());
 
-         loginInputData = loginTestCase.getLoginInputdata();
-
+	 loginInputData = Hooks.currentLoginTest.getLoginInputdata();
+	 
+         LoggerLoad.info("login email : " + loginInputData.getUserLoginEmail());
+         LoggerLoad.info("login password : "+ loginInputData.getPassword());
         // Create the request using RestAssured
          apiTextContext.request = given()
                 .baseUri(Hooks.baseUrl)
@@ -189,7 +189,7 @@ public void user_creates_post_request_with_request_body_request_body_userlogin_a
 	}
 	
 	@Given("User creates Post request with dietician input request body.Request body : Userlogin and password")
-	public void user_creates_post_request_with_dietician_input_request_body_request_body_userlogin_and_password() {
+	public void user_creates_post_request_with_dietician_input_request_body_request_body_userlogin_and_password() throws InterruptedException {
 	   
 		LoggerLoad.info("Sent a post request with valid dietician credentials");
 		Hooks.currentLoginTest = JSONDataReader.getTestCaseById(Hooks.allTestData.getLoginTests(), "LT_006");
@@ -197,12 +197,17 @@ public void user_creates_post_request_with_request_body_request_body_userlogin_a
 
 		DieticianloginInputdata = Hooks.currentLoginTest.getDieticianloginInputdata();
 		// Override the fields with values from response (captured earlier)
-		DieticianloginInputdata.setUserLoginEmail(DieticianStepDef.dieticianEmail);  // captured from response
-		DieticianloginInputdata.setPassword(DieticianStepDef.dieticianLoginPwd);     // captured from response
-
+		String dieticianemail = DieticianloginInputdata.getUserLoginEmail();
+		String modifiedEmail = dieticianemail.replace("{{dieticianEmail}", apiTextContext.dieticianLoginEmail);
+		
+		String dieticianpassword = DieticianloginInputdata.getPassword();
+		String modifiedPassword = dieticianpassword.replace("{{dieticianPassword}}", apiTextContext.dieticianPassword);
+		DieticianloginInputdata.setUserLoginEmail(modifiedEmail);  // captured from response
+		DieticianloginInputdata.setPassword(modifiedPassword); 
+		
 		LoggerLoad.info("Overriding email and password with captured values:");
-		LoggerLoad.info("Email: " + DieticianStepDef.dieticianEmail);
-		LoggerLoad.info("Password: " + DieticianStepDef.dieticianLoginPwd);
+		LoggerLoad.info("Email from dietician: " + modifiedEmail);
+		LoggerLoad.info("Password from dietician: " + modifiedPassword);
 		 apiTextContext.request = given()
 		            .baseUri(configReader.getProperty("baseURL"))
 		            .contentType(ContentType.JSON)
