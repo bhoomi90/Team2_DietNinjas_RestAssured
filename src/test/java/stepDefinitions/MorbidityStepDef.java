@@ -10,7 +10,7 @@ import org.testng.Assert;
 import utilities.CRUDHelper;
 import utilities.apiTextContext;
 
-public class MorbidityStepsDef {
+public class MorbidityStepDef {
     RequestSpecification request;
     Response response;
 
