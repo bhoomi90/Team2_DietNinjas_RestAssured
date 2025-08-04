@@ -1,8 +1,8 @@
-@morbidity
+@GetAllMorbidities
 
 Feature: GET all morbidities
   @Morbidity_test1
-  Scenario Outline: Check dietician able to retrieve all morbidities details
+  Scenario Outline: Check if dietician able to retrieve all morbidities details
     Given Dietician create a request for morbidity with no auth
     When  Dietician send GET http request with endpoint for morbidity
     Then Dietician receives with status code <statusCode>

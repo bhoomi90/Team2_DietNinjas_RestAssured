@@ -395,5 +395,22 @@
 		   			    "typeOfTesting": "Positive"
 		   					  
 		   			}
-		   	    ]
+		   	    ],
+	"morbidityTests": [
+		{
+			"testCaseId": "Morbidity_ByTestname_test1_1",
+			"scenario": "Check if dietician able to morbidity condition by test name",
+			"morbidityTestName": "T3"
+		},
+		{
+			"testCaseId": "Morbidity_ByTestname_test1_2",
+			"scenario": "Check if dietician able to morbidity condition by test name",
+			"morbidityTestName": "T4"
+		},
+		{
+			"testCaseId": "Morbidity_ByTestname_test1_3",
+			"scenario": "Check if dietician able to morbidity condition by test name",
+			"morbidityTestName": "TSH"
+		}
+	]
 }

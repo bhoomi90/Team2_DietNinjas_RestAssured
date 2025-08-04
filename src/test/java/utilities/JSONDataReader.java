@@ -17,6 +17,7 @@ import org.json.simple.parser.ParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import pojo.MorbidityTestData;
 import pojo.TestCaseData;
 import pojo.TestCasesWrapper;
 
@@ -38,8 +39,15 @@ public class JSONDataReader {
 	                .findFirst()
 	                .orElseThrow(() -> new RuntimeException("Test case not found: " + testCaseId));
 	    }
-	   
-	   public JSONObject readJsondata(String filepath, String data, int Index) throws IOException, ParseException {
+
+	public static MorbidityTestData getMorbidityTestById(List<MorbidityTestData> morbidityTests, String testCaseId) {
+		return morbidityTests.stream()
+				.filter(data -> testCaseId.equals(data.getTestCaseId()))
+				.findFirst()
+				.orElseThrow(() -> new RuntimeException("Test case not found: " + testCaseId));
+	}
+
+	public JSONObject readJsondata(String filepath, String data, int Index) throws IOException, ParseException {
 			
 			JSONParser jsonparser = new JSONParser();
 			FileReader  reader = new FileReader(filepath);

@@ -3,6 +3,7 @@ package utilities;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import pojo.MorbidityTestData;
 import pojo.TestCaseData;
 import pojo.TestCasesWrapper;
 import pojo.loginData;
@@ -63,5 +64,10 @@ public class CRUDHelper {
             }
         }
 
+    }
+
+    public static MorbidityTestData getMorbidityTestBy(String testCaseId) {
+        MorbidityTestData morbidityTestData = JSONDataReader.getMorbidityTestById(allTestData.getMorbidityTests(), testCaseId);
+        return morbidityTestData;
     }
 }
