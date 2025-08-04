@@ -42,7 +42,6 @@ Feature: GET all morbidities
 
   @Morbidity_test5
   Scenario Outline: Check if admin able to retrieve all morbidities details with invalid endpoint
-  #  Given Admin create a request for morbidity with admin token
     Given Login as a user with admin login information as in "<testCaseId>"
     And Admin create a request for morbidity with admin token
     When Admin send GET http request with invalid endpoint for morbidity
