@@ -1,132 +1,132 @@
 {
-	"loginTests": [
-		{
-			"testCaseId": "LT_001",
-			"scenario": "Check user able to login as admin with valid data",
-			"module": "Login",
-			"method": "POST",
-			"endpoints": "/login",
-			"expectedStatusCode": 200,
-			"expectedStatusLineMsg": "OK",
-			"typeOfTesting": "Positive",
-			"loginInputdata": {
-				"password": "test",
-				"userLoginEmail": "Team801@gmail.com"
-			}
-		},
-		{
-			"testCaseId": "LT_002",
-			"scenario": "Check user able to login as admin with invalid credential",
-			"module": "Login",
-			"method": "POST",
-			"endpoints": "/login",
-			"expectedStatusCode": 401,
-			"expectedStatusLineMsg": "Unauthorized",
-			"typeOfTesting": "Positive",
-			"loginInputdata": {
-				"password": " ",
-				"userLoginEmail": "Team601@gmail.com"
-			}
-		},
-		{
-			"testCaseId": "LT_003",
-			"scenario": "Check user able to login as admin with valid credential and invalid method",
-			"module": "Login",
-			"method": "GET",
-			"endpoints": "/login",
-			"expectedStatusCode": 405,
-			"expectedStatusLineMsg": "Method Not Allowed",
-			"typeOfTesting": "Positive",
-			"loginInputdata": {
-				"password": "test",
-				"userLoginEmail": "Team601@gmail.com"
-			}
-		},
-		{
-			"testCaseId": "LT_004",
-			"scenario": " Check user able to login as admin with valid credential and invalid endpoint",
-			"module": "Login",
-			"method": "POST",
-			"endpoints": "/log",
-			"expectedStatusCode": 401,
-			"expectedStatusLineMsg": "Unauthorized",
-			"typeOfTesting": "Negative",
-			"loginInputdata": {
-				"password": "test",
-				"userLoginEmail": "Team601@gmail.com"
-			}
-		},
-		{
-			"testCaseId": "LT_005",
-			"scenario": "Check user able to login as admin with valid credential and invalid content type",
-			"module": "Login",
-			"method": "POST",
-			"endpoints": "/login",
-			"expectedStatusCode": 415,
-			"expectedStatusLineMsg": "Unsupported Media Type",
-			"typeOfTesting": "Negative",
-			"loginInputdata": {
-				"password": "test",
-				"userLoginEmail": "Team601@gmail.com"
-			}
-		},
-		{
-			"testCaseId": "LT_006",
-			"scenario": "Check user able to login as dietician with valid credential",
-			"module": "Login",
-			"method": "POST",
-			"endpoints": "/login",
-			"expectedStatusCode": 200,
-			"expectedStatusLineMsg": "OK",
-			"typeOfTesting": "Positive",
-			"dieticianloginInputdata": {
-				"password": "Build33",
-				"userLoginEmail": "testDiet@gmail.com"
-			}
-		},
-		{
-			"testCaseId": "LT_007",
-			"scenario": "Check user able to login as dietician with invalid credential",
-			"module": "Login",
-			"method": "POST",
-			"endpoints": "/login",
-			"expectedStatusCode": 401,
-			"expectedStatusLineMsg": "Unauthorized",
-			"typeOfTesting": "Negative",
-			"dieticianloginInputdata": {
-				"password": "",
-				"userLoginEmail": "testDietgmail.com"
-			}
-		},
-		{
-			"testCaseId": "LT_008",
-			"scenario": "Check user able to login as patient with valid credential",
-			"module": "Login",
-			"method": "POST",
-			"endpoints": "/login",
-			"expectedStatusCode": 200,
-			"expectedStatusLineMsg": "OK",
-			"typeOfTesting": "Positive",
-			"patientloginInputdata": {
-				"password": "test",
-				"userLoginEmail": "diettest@test.com"
-			}
-		},
-		{
-			"testCaseId": "LT_009",
-			"scenario": "Check user able to login as patient with invalid credential",
-			"module": "Login",
-			"method": "POST",
-			"endpoints": "/login",
-			"expectedStatusCode": 401,
-			"expectedStatusLineMsg": "Unauthorized",
-			"typeOfTesting": "Negative",
-			"patientloginInputdata": {
-				"password": "test",
-				"userLoginEmail": "test123.com"
-			}
-		},
-		{
+  "loginTests": [
+    {
+      "testCaseId": "LT_001",
+      "scenario": "Check user able to login as admin with valid data",
+      "module": "Login",
+      "method": "POST",
+      "endpoints": "/login",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK",
+      "typeOfTesting": "Positive",
+      "loginInputdata": {
+        "password": "test",
+        "userLoginEmail": "Team110@gmail.com"
+      }
+    },
+    {
+      "testCaseId": "LT_002",
+      "scenario": "Check user able to login as admin with invalid credential",
+      "module": "Login",
+      "method": "POST",
+      "endpoints": "/login",
+      "expectedStatusCode": 401,
+      "expectedStatusLineMsg": "Unauthorized",
+      "typeOfTesting": "Positive",
+      "loginInputdata": {
+        "password": " ",
+        "userLoginEmail": "Team601@gmail.com"
+      }
+    },
+    {
+      "testCaseId": "LT_003",
+      "scenario": "Check user able to login as admin with valid credential and invalid method",
+      "module": "Login",
+      "method": "GET",
+      "endpoints": "/login",
+      "expectedStatusCode": 405,
+      "expectedStatusLineMsg": "Method Not Allowed",
+      "typeOfTesting": "Positive",
+      "loginInputdata": {
+        "password": "test",
+        "userLoginEmail": "Team801@gmail.com"
+      }
+    },
+    {
+      "testCaseId": "LT_004",
+      "scenario": " Check user able to login as admin with valid credential and invalid endpoint",
+      "module": "Login",
+      "method": "POST",
+      "endpoints": "/log",
+      "expectedStatusCode": 401,
+      "expectedStatusLineMsg": "Unauthorized",
+      "typeOfTesting": "Negative",
+      "loginInputdata": {
+        "password": "test",
+        "userLoginEmail": "Team801@gmail.com"
+      }
+    },
+    {
+      "testCaseId": "LT_005",
+      "scenario": "Check user able to login as admin with valid credential and invalid content type",
+      "module": "Login",
+      "method": "POST",
+      "endpoints": "/login",
+      "expectedStatusCode": 415,
+      "expectedStatusLineMsg": "Unsupported Media Type",
+      "typeOfTesting": "Negative",
+      "loginInputdata": {
+        "password": "test",
+        "userLoginEmail": "Team601@gmail.com"
+      }
+    },
+    {
+      "testCaseId": "LT_006",
+      "scenario": "Check user able to login as dietician with valid credential",
+      "module": "Login",
+      "method": "POST",
+      "endpoints": "/login",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK",
+      "typeOfTesting": "Positive",
+      "dieticianloginInputdata": {
+        "password": "Help77",
+        "userLoginEmail": "chiru@gmail.com"
+      }
+    },
+    {
+      "testCaseId": "LT_007",
+      "scenario": "Check user able to login as dietician with invalid credential",
+      "module": "Login",
+      "method": "POST",
+      "endpoints": "/login",
+      "expectedStatusCode": 401,
+      "expectedStatusLineMsg": "Unauthorized",
+      "typeOfTesting": "Negative",
+      "dieticianloginInputdata": {
+        "password": "",
+        "userLoginEmail": "testDietgmail.com"
+      }
+    },
+    {
+      "testCaseId": "LT_008",
+      "scenario": "Check user able to login as patient with valid credential",
+      "module": "Login",
+      "method": "POST",
+      "endpoints": "/login",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK",
+      "typeOfTesting": "Positive",
+      "patientloginInputdata": {
+        "password": "test",
+        "userLoginEmail": "diettest@test.com"
+      }
+    },
+    {
+      "testCaseId": "LT_009",
+      "scenario": "Check user able to login as patient with invalid credential",
+      "module": "Login",
+      "method": "POST",
+      "endpoints": "/login",
+      "expectedStatusCode": 401,
+      "expectedStatusLineMsg": "Unauthorized",
+      "typeOfTesting": "Negative",
+      "patientloginInputdata": {
+        "password": "test",
+        "userLoginEmail": "test123.com"
+      }
+    },
+	{
 			"testCaseId": "Morbidity_test2",
 			"scenario": "Check if patient is able to retrieve all morbidities details",
 			"module": "Login",
@@ -226,177 +226,254 @@
 		}
 
 	],
-	"logoutTests": [
-		{
-			"testCaseId": "LOT_001",
-			"scenario": "Check admin able to logout ",
-			"module": "Login",
-			"method": "GET",
-			"endpoints": "/logoutdietician",
-			"expectedStatusCode": 401,
-			"expectedStatusLineMsg": "Unauthorized"
-		},
-		{
-			"testCaseId": "LOT_002",
-			"scenario": " Check dietician able to logout  ",
-			"module": "Login",
-			"method": "GET",
-			"endpoints": "/logoutdietician",
-			"expectedStatusCode": 401,
-			"expectedStatusLineMsg": "Unauthorized"
-		},
-		{
-			"testCaseId": "LOT_003",
-			"scenario": "Check patient able to logout  ",
-			"module": "Login",
-			"method": "GET",
-			"endpoints": "/logoutdietician",
-			"expectedStatusCode": 401,
-			"expectedStatusLineMsg": "Unauthorized"
-		},
-		{
-			"testCaseId": "LOT_004",
-			"scenario": "Check admin able to logout",
-			"module": "Login",
-			"method": "GET",
-			"endpoints": "/logoutdietician",
-			"expectedStatusCode": 200,
-			"expectedStatusLineMsg": "OK"
-		},
-		{
-			"testCaseId": "LOT_005",
-			"scenario": "Check admin able to logout  with invalid method",
-			"module": "Login",
-			"method": "POST",
-			"endpoints": "/logoutdietician",
-			"expectedStatusCode": 405,
-			"expectedStatusLineMsg": "Method Not Allowed"
-		},
-		{
-			"testCaseId": "LOT_006",
-			"scenario": "Check dietician able to logout",
-			"module": "Login",
-			"method": "GET",
-			"endpoints": "/logoutdietician",
-			"expectedStatusCode": 200,
-			"expectedStatusLineMsg": "OK"
-		},
-		{
-			"testCaseId": "LOT_007",
-			"scenario": "Check dietician able to logout  with invalid method",
-			"module": "Login",
-			"method": "POST",
-			"endpoints": "/logoutdietician",
-			"expectedStatusCode": 405,
-			"expectedStatusLineMsg": "Method Not Allowed"
-		},
-		{
-			"testCaseId": "LOT_008",
-			"scenario": "Check patient able to logout",
-			"module": "Login",
-			"method": "GET",
-			"endpoints": "/logoutdietician",
-			"expectedStatusCode": 200,
-			"expectedStatusLineMsg": "OK"
-		},
-		{
-			"testCaseId": "LOT_008",
-			"scenario": "Check atient able to logout  with invalid method",
-			"module": "Login",
-			"method": "POST",
-			"endpoints": "/logoutdietician",
-			"expectedStatusCode": 405,
-			"expectedStatusLineMsg": "Method Not Allowed"
-		}
-	],
+	 "logoutTests": [
+    {
+      "testCaseId": "LOT_001",
+      "scenario": "Check admin able to logout ",
+      "module": "Logout",
+      "method": "GET",
+      "endpoints": "/logoutdietician",
+      "expectedStatusCode": 401,
+      "expectedStatusLineMsg": "Unauthorized"
+    },
+    {
+      "testCaseId": "LOT_002",
+      "scenario": " Check dietician able to logout  ",
+      "module": "Logout",
+      "method": "GET",
+      "endpoints": "/logoutdietician",
+      "expectedStatusCode": 401,
+      "expectedStatusLineMsg": "Unauthorized"
+    },
+    {
+      "testCaseId": "LOT_003",
+      "scenario": "Check patient able to logout  ",
+      "module": "Logout",
+      "method": "GET",
+      "endpoints": "/logoutdietician",
+      "expectedStatusCode": 401,
+      "expectedStatusLineMsg": "Unauthorized"
+    },
+    {
+      "testCaseId": "LOT_004",
+      "scenario": "Check admin able to logout",
+      "module": "Logout",
+      "method": "GET",
+      "endpoints": "/logoutdietician",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK"
+    },
+    {
+      "testCaseId": "LOT_005",
+      "scenario": "Check admin able to logout  with invalid method",
+      "module": "Logout",
+      "method": "POST",
+      "endpoints": "/logoutdietician",
+      "expectedStatusCode": 405,
+      "expectedStatusLineMsg": "Method Not Allowed"
+    },
+    {
+      "testCaseId": "LOT_006",
+      "scenario": "Check dietician able to logout",
+      "module": "Logout",
+      "method": "GET",
+      "endpoints": "/logoutdietician",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK"
+    },
+    {
+      "testCaseId": "LOT_007",
+      "scenario": "Check dietician able to logout  with invalid method",
+      "module": "Logout",
+      "method": "POST",
+      "endpoints": "/logoutdietician",
+      "expectedStatusCode": 405,
+      "expectedStatusLineMsg": "Method Not Allowed"
+    },
+    {
+      "testCaseId": "LOT_008",
+      "scenario": "Check patient able to logout",
+      "module": "Logout",
+      "method": "GET",
+      "endpoints": "/logoutdietician",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK"
+    },
+    {
+      "testCaseId": "LOT_008",
+      "scenario": "Check atient able to logout  with invalid method",
+      "module": "Logout",
+      "method": "POST",
+      "endpoints": "/logoutdietician",
+      "expectedStatusCode": 405,
+      "expectedStatusLineMsg": "Method Not Allowed"
+    }
+  ],
    "dieticianTests": [
-	   {
-	  	"testCaseId": "DT_001",
-	  	"scenario": "Check admin able to create dietician with valid data and token",
-	      "module": "CreateDietician",
-	      "method": "POST",
-	  	"endpoints": "/dietician",
-	  	"expectedStatusCode": 201,
-	  	"expectedStatusLineMsg": "Created",
-	  	"typeOfTesting": "Positive",
-	  	"dieticianInputdata": {
-	  	  "Firstname": "Navishapalz",
-	  	  "Lastname": "Palz",
-	  	  "HospitalName": "SutterHealth",
-	  	  "HospitalCity": "Sunnyvale",
-	  	  "HospitalStreet": "wolfst",
-	  	  "HospitalPincode": "898965",
-	  	  "DateOfBirth": "1974-05-16T17:50:00.760Z",
-	  	  "ContactNumber": "9894026288",
-	  	  "Education": "DPD",
-	  	  "Email": "saro29@gmail.com"
-	       }
-     }
-   ],
-   "dieticianGetallTests":[
-		{
-			"testCaseId": "GetAllDT_001",
-			"scenario": "Check admin able to retrieve all dietician",
-			"module": "GetAllDietician",
-			"method" : "GET",
-			"endpoints": "/dietician",
-			"expectedStatusCode": 200,
-			"expectedStatusLineMsg": "OK",
-		    "typeOfTesting": "Positive"
-				  
+    {
+      "testCaseId": "DT_001",
+      "scenario": "Check admin able to create dietician with valid data and token",
+      "module": "CreateDietician",
+      "method": "POST",
+      "endpoints": "/dietician",
+      "expectedStatusCode": 201,
+      "expectedStatusLineMsg": "Created",
+      "typeOfTesting": "Positive",
+      "dieticianInputdata": {
+        "Firstname": "Navishapalz",
+        "Lastname": "Palz",
+        "HospitalName": "SutterHealth",
+        "HospitalCity": "Sunnyvale",
+        "HospitalStreet": "wolfst",
+        "HospitalPincode": "898965",
+        "DateOfBirth": "1988-07-11",
+        "ContactNumber": "9894026103",
+        "Education": "DPD",
+        "Email": "sar081@gmail.com"
+      }
+    }
+  ],
+  "dieticianGetallTests": [
+    {
+      "testCaseId": "GetAllDT_001",
+      "scenario": "Check admin able to retrieve all dietician",
+      "module": "GetAllDietician",
+      "method": "GET",
+      "endpoints": "/dietician",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK",
+      "typeOfTesting": "Positive"
+    }
+  ],
+  "dieticianGetIdTests": [
+    {
+      "testCaseId": "GetById_DT_001",
+      "scenario": "Check admin able to retrieve dietician by ID",
+      "module": "GetDieticianbyID",
+      "method": "GET",
+      "endpoints": "/dietician/{dieticianId}",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK",
+      "typeOfTesting": "Positive"
+    }
+  ],
+  "updateDieticianTests": [
+    {
+      "testCaseId": "PutDT_001",
+      "scenario": "Check admin able to update dietician with valid data , dietician id and token ",
+      "module": "UpdateDietician",
+      "method": "PUT",
+      "endpoints": "/dietician/{dieticianId}",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK",
+      "typeOfTesting": "Positive",
+      "dieticianInputdata": {
+        "Firstname": "Dheekpalz",
+        "Lastname": "Palz",
+        "HospitalName": "SutterHealthGroup",
+        "HospitalCity": "Cupertino",
+        "HospitalStreet": "wolfStreet",
+        "HospitalPincode": "898969",
+        "DateOfBirth": "1975-05-16T17:50:00.760Z",
+        "ContactNumber": "9894026289",
+        "Education": "DPD",
+        "Email": "saro30@gmail.com"
+      }
+    }
+  ],
+  "deleteDieticianIdTests": [
+    {
+      "testCaseId": "Delete_DT_001",
+      "scenario": "Check admin able to delete dietician by ID ",
+      "module": "DeleteDieticianbyID",
+      "method": "DELETE",
+      "endpoints": "/dietician/{dieticianId}",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK",
+      "typeOfTesting": "Positive"
+    }
+  ],
+   "dieticianLoginTests": [
+    {
+      "testCaseId": "DT_login_001",
+      "scenario": "Check admin able to create dietician for dietician login with valid data and token",
+      "module": "CreateDietician",
+      "method": "POST",
+      "endpoints": "/dietician",
+      "expectedStatusCode": 201,
+      "expectedStatusLineMsg": "Created",
+      "typeOfTesting": "Positive",
+      "dieticianLoginInputdata": {
+        "Firstname": "Diet",
+        "Lastname": "Test",
+        "HospitalName": "Fairview",
+        "HospitalCity": "EdenPrairie",
+        "HospitalStreet": "wolfst",
+        "HospitalPincode": "898965",
+        "DateOfBirth": "1985-12-17",
+        "ContactNumber": "1245679005",
+        "Education": "DPD",
+        "Email": "TestDiet@yahoo.com"
+      }
+    }
+  ],
+  "getAllPatientsTests": [
+    {
+      "testCaseId": "GPT_001",
+      "scenario": "Check admin is able to retrieve patients morbidity details by patient ID ",
+      "module": "GetAllPatients",
+      "method": "GET",
+      "endpoints": "/patient",
+      "expectedStatusCode": 403,
+      "expectedStatusLineMsg": "Forbidden"
+    },
+    {
+      "testCaseId": "GPT_002",
+      "scenario": "Check patient is able to retrieve patients morbidity details by patient ID",
+      "module": "GetAllPatients",
+      "method": "GET",
+      "endpoints": "/patient",
+      "expectedStatusCode": 403,
+      "expectedStatusLineMsg": "Forbidden"
+    },
+    {
+      "testCaseId": "GPT_003",
+      "scenario": "Check dietician able to retrieve all patients ",
+      "module": "GetAllPatients",
+      "method": "GET",
+      "endpoints": "/patient",
+      "expectedStatusCode": 200,
+      "expectedStatusLineMsg": "OK"
+    },
+	{
+	      "testCaseId": "GPT_004",
+	      "scenario": "Check dietician able to retrieve all patient with invalid method",
+	      "module": "GetAllPatients",
+	      "method": "PUT",
+	      "endpoints": "/patient",
+	      "expectedStatusCode":405 ,
+	      "expectedStatusLineMsg": "Method Not Allowed"
+	    },
 		}
-    ],
-	"dieticianGetIdTests":[
+		      "testCaseId": "GPT_005",
+		      "scenario": "Check admin is able to retrieve patients morbidity details by patient ID ",
+		      "module": "GetAllPatients",
+		      "method": "GET",
+		      "endpoints": "/invalidpatient",
+		      "expectedStatusCode": 404,
+		      "expectedStatusLineMsg": "Not Found"
+		    },
 			{
-				"testCaseId": "GetById_DT_001",
-				"scenario": "Check admin able to retrieve dietician by ID",
-				"module": "GetDieticianbyID",
-				"method" : "GET",
-				"endpoints": "/dietician/{dieticianId}",
-				"expectedStatusCode": 200,
-				"expectedStatusLineMsg": "OK",
-			    "typeOfTesting": "Positive"
-					  
-			}
-	    ],
-		"updateDieticianTests": [
-			   {
-			  	"testCaseId": "PutDT_001",
-			  	"scenario": "Check admin able to update dietician with valid data , dietician id and token ",
-			      "module": "UpdateDietician",
-			      "method": "PUT",
-			  	"endpoints": "/dietician/{dieticianId}",
-			  	"expectedStatusCode": 200,
-			  	"expectedStatusLineMsg": "OK",
-			  	"typeOfTesting": "Positive",
-			  	"dieticianInputdata": {
-			  	  "Firstname": "Dheekpalz",
-			  	  "Lastname": "Palz",
-			  	  "HospitalName": "SutterHealthGroup",
-			  	  "HospitalCity": "Cupertino",
-			  	  "HospitalStreet": "wolfStreet",
-			  	  "HospitalPincode": "898969",
-			  	  "DateOfBirth": "1975-05-16T17:50:00.760Z",
-			  	  "ContactNumber": "9894026289",
-			  	  "Education": "DPD",
-			  	  "Email": "saro30@gmail.com"
-			       }
-		     }
-		   ],
-		   "deleteDieticianIdTests":[
-		   			{
-		   				"testCaseId": "Delete_DT_001",
-		   				"scenario": "Check admin able to delete dietician by ID ",
-		   				"module": "DeleteDieticianbyID",
-		   				"method" : "DELETE",
-		   				"endpoints": "/dietician/{dieticianId}",
-		   				"expectedStatusCode": 200,
-		   				"expectedStatusLineMsg": "OK",
-		   			    "typeOfTesting": "Positive"
-		   					  
-		   			}
-		   	    ],
-	"morbidityTests": [
+			      "testCaseId": "GPT_006",
+			      "scenario": "Check dietician able to retrieve patients morbidity details by patient ID",
+			      "module": "GetAllPatients",
+			      "method": "GET",
+			      "endpoints": "/patient",
+			      "expectedStatusCode": 401,
+			      "expectedStatusLineMsg": "Unauthorized"
+			    }
+  ]
+		],"morbidityTests": [
 		{
 			"testCaseId": "Morbidity_ByTestname_test1_1",
 			"scenario": "Check if dietician able to morbidity condition by test name",
@@ -418,7 +495,8 @@
 			"morbidityTestName": "TSH1"
 		}
 	],
-	"patientTests": [
+		
+		"patientTests": [
 		{
 			"testCaseId": "NewPatientForDeletion_test1",
 			"scenarioName": "Create patient",
@@ -445,4 +523,3 @@
 			}
 		}
 	]
-}

@@ -27,18 +27,21 @@ public class DieticianStepDef {
     public void set_admin_bearer_token() {
         // Use bearer token from login
 
-        String token = apiTextContext.authToken;  
+        String token = apiTextContext.authToken; 
+    	//String token = UserLoginStepDef.authToken;
+        LoggerLoad.info("Admin token value : " + token);
+        
         if (token == null || token.isEmpty()) {
             throw new RuntimeException("Token not set from login. Make sure login scenario runs before this.");
         }
 
         // Prepare request with token
-        request = given()
+           request = given()
                 .baseUri(Hooks.baseUrl)
                 .header("Authorization", "Bearer " + token)
                 .header("Content-Type", "application/json");
 
-        Hooks.request = request; // You should set it here so other step classes can use it
+          Hooks.request = request; // You should set it here so other step classes can use it
 
         		
     }
@@ -70,7 +73,7 @@ public class DieticianStepDef {
     	String endpoint = dieticianTestCase.getEndpoints();
     	 LoggerLoad.info("Endpoint: " + endpoint);
     	 response = Hooks.request.post(endpoint);
-    	response= request.post(endpoint);
+    	  //response= request.post(endpoint);
     	
         LoggerLoad.info("Status Code: " + response.getStatusCode());
         LoggerLoad.info("Response Body: " + response.getBody().asPrettyString());

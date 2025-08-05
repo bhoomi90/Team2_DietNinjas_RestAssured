@@ -1,9 +1,10 @@
+@LogoutTests
 Feature: Logout get request
 
 Background: set authentication to logout user
 Given Set bearer token in header
 
-#@logoutpositive
+@logoutpositive
 Scenario: Check admin able to logout  
 Given User creates GET request for logout 
 When User send GET HTTP request with valid endpoint

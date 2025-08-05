@@ -16,7 +16,6 @@ public class TestCasesWrapper {
     
 	private List<TestCaseData> logoutTests;
 
-    private List<TestCaseData> logoutTests;
 
     private List<MorbidityTestData> morbidityTests;
 
