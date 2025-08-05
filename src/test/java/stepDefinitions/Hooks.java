@@ -33,10 +33,6 @@ public class Hooks {
         // Load all test data from JSON
         allTestData = JSONDataReader.readAllModules("src/test/resources/testData/jsonData.json");
         logger.info("All test data loaded");
-
-        // Optionally, load a specific test case if required globally
-        currentLoginTest = JSONDataReader.getTestCaseById(allTestData.getLoginTests(), "LT_001");
-        logger.info("Loaded Login Test Case: " + currentLoginTest.getScenario());
         
     }
 
