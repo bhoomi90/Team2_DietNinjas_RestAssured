@@ -1,4 +1,3 @@
-@LoginModule
 Feature: User login post request
 
 Background: No Authorization
@@ -45,7 +44,7 @@ Given User creates Post request with invalid patient credential
 When User send POST HTTP request with endpoint
 Then User recieves 401 unauthorized
 
-##############  Logout No Auth Scenarios ############################
+###############  Logout No Auth Scenarios ############################
 @logout1
 Scenario: Check admin able to logout  
 Given User creates GET request 
