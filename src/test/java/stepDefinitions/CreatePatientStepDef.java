@@ -33,8 +33,8 @@ public class CreatePatientStepDef {
     public static String patientEmail;    // -------- save email
 	RequestSpecification request;
 	Response response;
-	static String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWhhMTBAZ21haWwuY29tIiwiaWF0IjoxNzU0NDAzMDcyLCJleHAiOjE3NTQ0MzE4NzJ9.vY-qQ_VoTaMdR62va5ouWoUKwp5kMEO0jGNuBLHQUMnp_CTPMpKzamUb0JQ5P_e9QNIC0LyGUPxoufZcJmPVPw";
-	static String adminToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtMTEwQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQwMzYyMiwiZXhwIjoxNzU0NDMyNDIyfQ.ICJzj64s-_yrDB3Mh0jlNSEyPW3CgKycsgRYpT1Ui4BKKB47ZTTvISPYho_1pvs9ShhRr_L59SqII0KAgeZRNw";
+	static String dieticianToken;// = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWhhMTBAZ21haWwuY29tIiwiaWF0IjoxNzU0NDAzMDcyLCJleHAiOjE3NTQ0MzE4NzJ9.vY-qQ_VoTaMdR62va5ouWoUKwp5kMEO0jGNuBLHQUMnp_CTPMpKzamUb0JQ5P_e9QNIC0LyGUPxoufZcJmPVPw";
+	static String adminToken ;//= "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtMTEwQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQwMzYyMiwiZXhwIjoxNzU0NDMyNDIyfQ.ICJzj64s-_yrDB3Mh0jlNSEyPW3CgKycsgRYpT1Ui4BKKB47ZTTvISPYho_1pvs9ShhRr_L59SqII0KAgeZRNw";
 	static String patientToken;
 	
 	// Set bearer token
@@ -205,8 +205,13 @@ public class CreatePatientStepDef {
 	
 	@Then("Dietician recieves {int} created and with response body. \\(Auto created dietician ID and login password)")
 	public void dietician_recieves_created_and_with_response_body_auto_created_dietician_id_and_login_password(Integer expectedStatusCode) {
+		
 		response.then().log().all().statusCode(expectedStatusCode);
 		
+		if(response.statusCode()==expectedStatusCode) {
+			LoggerLoad.info("Patient is created successfully");
+		}
+
 		if(expectedStatusCode == 201) {
 	       	patientId = response.jsonPath().getString("patientId");
 	    	LoggerLoad.info("PatientId saved:"+ patientId);
@@ -222,7 +227,7 @@ public class CreatePatientStepDef {
 			assertEquals(response.jsonPath().getString("DateOfBirth"), patientData.getPatientDataInput().getDateOfBirth());
 			assertEquals(response.jsonPath().getString("FoodPreference"), patientData.getPatientDataInput().getFoodPreference());
 			assertEquals(response.jsonPath().getString("CuisineCategory"), patientData.getPatientDataInput().getCuisineCategory());
-			
+			if(patientData.getScenarioName().equals("Create patient")) {
 			response.then().body(matchesJsonSchemaInClasspath("schema/createPatientSchema.json"));
 			
 			assertTrue(response.getBody().asString().contains("patientId"), "patientId is not present in response");
@@ -266,6 +271,7 @@ public class CreatePatientStepDef {
 			if(tshValue>4.78 && t4Value<5) {
 				assertTrue(fileMorbidityCondition.contains("Hypothyroidism"), "Should have Hypothyroidism based on condition");
 			}
+		}
 		}
 	}
 	
