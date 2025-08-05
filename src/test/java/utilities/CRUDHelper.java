@@ -1,14 +1,15 @@
 package utilities;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import pojo.TestCaseData;
-import pojo.TestCasesWrapper;
-import pojo.loginData;
+import pojo.*;
 import stepDefinitions.Hooks;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 
 
 public class CRUDHelper {
@@ -18,6 +19,7 @@ public class CRUDHelper {
     public static RequestSpecification getRequestWithNoAuth() {
 
         RestAssured.baseURI = configReader.getProperty ("baseURL");
+        //Setting up the request before sending an API
         RequestSpecification request = RestAssured.given();
         return request;
     }
@@ -63,5 +65,32 @@ public class CRUDHelper {
             }
         }
 
+    }
+
+    public static MorbidityTestData getMorbidityTestBy(String testCaseId) {
+        MorbidityTestData morbidityTestData = JSONDataReader.getMorbidityTestById(allTestData.getMorbidityTests(), testCaseId);
+        return morbidityTestData;
+    }
+
+
+    public static int createNewPatient(String testCaseId) {
+        RequestSpecification request = getRequestWithToken(apiTextContext.dieticianToken);
+
+        PatientTestData patientTestData = JSONDataReader.getPatientTestById(allTestData.getPatientTests(), testCaseId);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            String patientInfoJson = mapper.writeValueAsString(patientTestData.getPatientDataInput());
+            request.contentType(ContentType.MULTIPART)
+                    .multiPart("patientInfo", patientInfoJson);
+            Response response = request.post("/patient");
+
+            if (response.getStatusCode() != 201) {
+                throw new RuntimeException("Not able to create patient");
+            }
+
+            return response.jsonPath().getInt("patientId");
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
