@@ -126,14 +126,6 @@ public class MorbidityByTestNameStepDef {
 
     }
 
-//    @Then("Dietician receives with status code {int}")
-//    public void dieticianReceivesWithStatusCode(int expectedStatusCode) {
-//        int actualStatusCode = response.getStatusCode();
-////      Assert the status code
-//        Assert.assertEquals(actualStatusCode, expectedStatusCode);
-//
-//    }
-
     @When("Dietician send POST http request with endpoint for morbidity by test {string}")
     public void dieticianSendPOSTHttpRequestWithEndpointForMorbidityByTest(String testCaseId) {
         response = request.post("/morbidity" + CRUDHelper.getMorbidityTestBy(testCaseId).getMorbidityTestName());

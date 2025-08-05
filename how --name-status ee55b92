@@ -1,0 +1,216 @@
+[33mcommit ee55b92edf762523b93a8e0201239e0fd3be62b1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mAsta[m[33m)[m
+Merge: 4913824 b0dcb55
+Author: Astalakshmi <asta.dheek@gmail.com>
+Date:   Sun Aug 3 23:21:03 2025 -0700
+
+    Merge branch 'Asta' of https://github.com/bhoomi90/Team2_DietNinjas_RestAssured into Asta
+    Lines starting with '#' will be ignored, and an empty message aborts
+
+[33mcommit 4913824a9047602ac3b0f7243fe706d3e583cc65[m
+Author: Astalakshmi <asta.dheek@gmail.com>
+Date:   Sun Aug 3 23:10:10 2025 -0700
+
+    Negative Testcases
+
+[33mcommit b0dcb555cd404578d45b48321703b8a5d68f9cd7[m[33m ([m[1;31morigin/Asta[m[33m)[m
+Merge: 8531aa8 093dc21
+Author: Astalakshmi <94814516+Astalakshmi@users.noreply.github.com>
+Date:   Sun Aug 3 09:00:32 2025 -0700
+
+    Merge branch 'master' into Asta
+
+[33mcommit 8531aa842484cf6c4099bfd411ed8a56bf5a2161[m
+Author: Astalakshmi <asta.dheek@gmail.com>
+Date:   Sun Aug 3 08:47:26 2025 -0700
+
+    chaining work in dietician module
+
+[33mcommit 093dc217fa0915c417ff0da1593c737749535872[m
+Merge: b9f1e49 fe2a1a5
+Author: rrajasri <rajasri.kr@gmail.com>
+Date:   Sun Aug 3 01:07:47 2025 -0500
+
+    Merge pull request #6 from bhoomi90/Rajasri
+    
+    Rajasri - WIP
+
+[33mcommit fe2a1a516e74ff880a99d6994af372cac7cf910a[m
+Merge: e4a0ad7 b9f1e49
+Author: Rajasri <Rajasri.kr@gmail.com>
+Date:   Sun Aug 3 01:05:36 2025 -0500
+
+    Merge branch 'master' into Rajasri
+
+[33mcommit e4a0ad77ea107596e05218509c1d5dd4c9145fec[m
+Author: Rajasri <Rajasri.kr@gmail.com>
+Date:   Sun Aug 3 00:58:14 2025 -0500
+
+    WIP
+
+[33mcommit b9f1e497612b29c72d9e5bd5d17b911dd8bc0515[m
+Author: Sumathi Mukkera <sumathi.barupati9@gmail.com>
+Date:   Sun Aug 3 00:35:00 2025 -0500
+
+    Update configReader.java
+
+[33mcommit 32281590a64c2baa483c34021ab55536e679737c[m
+Author: Sumathi Mukkera <sumathi.barupati9@gmail.com>
+Date:   Sun Aug 3 00:34:01 2025 -0500
+
+    Update JSONDataReader.java
+
+[33mcommit 856319c50c262af0d4984542572591b1a199344d[m
+Merge: c44c1df 99a6967
+Author: SumathiMukkera <sumathi.barupati9@gmail.com>
+Date:   Sun Aug 3 00:28:12 2025 -0500
+
+    Merge resolved conflicts
+
+[33mcommit 99a6967e854caf24ae7c0e705d7f584a4423609b[m
+Author: SumathiMukkera <sumathi.barupati9@gmail.com>
+Date:   Sat Aug 2 23:52:44 2025 -0500
+
+    logout step defination
+
+[33mcommit 4e8e5bd810147d0a6125f26cc8b873322b7c0154[m
+Author: SumathiMukkera <sumathi.barupati9@gmail.com>
+Date:   Sat Aug 2 23:26:58 2025 -0500
+
+    logout changes
+
+[33mcommit 5cdbff0a46318740da730a13bbe47b2f50db1c74[m
+Author: SumathiMukkera <sumathi.barupati9@gmail.com>
+Date:   Sat Aug 2 23:21:42 2025 -0500
+
+    userlogout updates
+
+[33mcommit c44c1df3c1dc0e495fff443089e2f8b29147638d[m
+Merge: 18f97ee 387f119
+Author: Astalakshmi <94814516+Astalakshmi@users.noreply.github.com>
+Date:   Sat Aug 2 21:10:18 2025 -0700
+
+    Merge pull request #4 from bhoomi90/Asta
+    
+    added variable in hooks
+
+[33mcommit 387f119d8aaf2e0abb73f1bfcdf3824bc07565c9[m
+Author: Astalakshmi <asta.dheek@gmail.com>
+Date:   Sat Aug 2 21:09:17 2025 -0700
+
+    added variable in hooks
+
+[33mcommit 8577df087200c607c17a95a604844ab219f66f89[m
+Author: Sumathi Mukkera <sumathi.barupati9@gmail.com>
+Date:   Sat Aug 2 22:31:20 2025 -0500
+
+    Update .gitignore
+
+[33mcommit 02a9c5ac15eb3d3d4c8ebbff22fdd232a2598324[m
+Author: Sumathi Mukkera <sumathi.barupati9@gmail.com>
+Date:   Sat Aug 2 22:30:04 2025 -0500
+
+    Update .gitignore
+
+[33mcommit c67b06cf21d894e938fd62d7a5d77c14db0b04fd[m
+Author: Sumathi Mukkera <sumathi.barupati9@gmail.com>
+Date:   Sat Aug 2 22:29:23 2025 -0500
+
+    Delete logs directory
+
+[33mcommit 45a16abbe2023e906c85d101334891c06331f788[m
+Author: Sumathi Mukkera <sumathi.barupati9@gmail.com>
+Date:   Sat Aug 2 22:29:09 2025 -0500
+
+    Delete allure-results directory
+
+[33mcommit 006096592b1d7f23a7eeaf942867be2a8bcdf874[m
+Author: SumathiMukkera <sumathi.barupati9@gmail.com>
+Date:   Sat Aug 2 21:43:05 2025 -0500
+
+    new login updates
+
+[33mcommit 6042e05691c9c41f1c27f2a58d91365dcaa8ef9c[m
+Merge: 8c8fb7d 18f97ee
+Author: Rajasri <Rajasri.kr@gmail.com>
+Date:   Sat Aug 2 18:12:45 2025 -0500
+
+    Merge branch 'master' into Rajasri
+
+[33mcommit 8c8fb7d3a0b617ec2563dc6336cecf550edf50c5[m
+Author: Rajasri <Rajasri.kr@gmail.com>
+Date:   Sat Aug 2 17:54:26 2025 -0500
+
+    WIP
+
+[33mcommit 18f97eed195a6f4998496c416fe012f725febc51[m
+Author: Astalakshmi <asta.dheek@gmail.com>
+Date:   Sat Aug 2 14:02:42 2025 -0700
+
+    update in jsondata
+
+[33mcommit 5dda9f18cac26f03445bb8bd92046ed4f821cbb3[m
+Author: Astalakshmi <asta.dheek@gmail.com>
+Date:   Sat Aug 2 12:28:42 2025 -0700
+
+    update validation in then part
+
+[33mcommit 5a6ce7c7caeb6be6e1d353edf935de88f9a04bf4[m
+Author: Astalakshmi <asta.dheek@gmail.com>
+Date:   Fri Aug 1 18:09:31 2025 -0700
+
+    changed in dieticianData POJO class and stepdefinition of dietician
+
+[33mcommit a6002477654780a84f452af594a24a082a365082[m
+Author: Astalakshmi <asta.dheek@gmail.com>
+Date:   Fri Aug 1 15:03:33 2025 -0700
+
+    Upload changes
+
+[33mcommit c00ef12bb5d8d5cd151b6c018695bf8f974ffdfe[m
+Merge: e981339 f86e72c
+Author: Rajasri <Rajasri.kr@gmail.com>
+Date:   Wed Jul 30 23:17:35 2025 -0500
+
+    Merge branch 'main' into Rajasri
+
+[33mcommit e9813396d2bd86ba3f3af3699ef48269bdbab513[m
+Author: Rajasri <Rajasri.kr@gmail.com>
+Date:   Wed Jul 30 23:15:44 2025 -0500
+
+    WIP
+
+[33mcommit f86e72c68cd1bdf5d42a8d7cf430d25976a546f7[m
+Merge: f0bdbd9 0445906
+Author: bhoomi90 <bhoomi.chakrani@hotmail.com>
+Date:   Wed Jul 30 20:55:58 2025 -0400
+
+    Merge pull request #2 from bhoomi90/Sumathi
+    
+    user login admin token generation
+
+[33mcommit 0445906f9e1c497690ff1cef2a271e4e0d28c7fa[m
+Author: SumathiMukkera <sumathi.barupati9@gmail.com>
+Date:   Wed Jul 30 16:45:21 2025 -0500
+
+    user login admin token generation
+
+[33mcommit f0bdbd9c6f29a56c482ca1118f3e766ef85115d2[m
+Merge: dc8d7dc 11e5707
+Author: bhoomi90 <bhoomi.chakrani@hotmail.com>
+Date:   Wed Jul 30 15:30:14 2025 -0400
+
+    Merge pull request #1 from bhoomi90/bhoomi_k
+    
+    Convert to cucumber project
+
+[33mcommit 11e5707d4163199e63157b4bd71c7e790559d5c4[m
+Author: bhoomi <bhoomi.chakrani@hotmail.com>
+Date:   Wed Jul 30 15:29:25 2025 -0400
+
+    Convert to cucumber project
+
+[33mcommit dc8d7dc679f43507b75976f9f269bd0d169131b2[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: bhoomi <bhoomi.chakrani@hotmail.com>
+Date:   Wed Jul 30 12:35:09 2025 -0400
+
+    skeleton package dietNinjas
