@@ -196,18 +196,7 @@ public void user_creates_post_request_with_request_body_request_body_userlogin_a
 		LoggerLoad.info("Loaded Login Test Case: " + Hooks.currentLoginTest.getScenario());
 
 		DieticianloginInputdata = Hooks.currentLoginTest.getDieticianloginInputdata();
-		// Override the fields with values from response (captured earlier)
-		String dieticianemail = DieticianloginInputdata.getUserLoginEmail();
-		String modifiedEmail = dieticianemail.replace("{{dieticianEmail}", apiTextContext.dieticianLoginEmail);
-		
-		String dieticianpassword = DieticianloginInputdata.getPassword();
-		String modifiedPassword = dieticianpassword.replace("{{dieticianPassword}}", apiTextContext.dieticianPassword);
-		DieticianloginInputdata.setUserLoginEmail(modifiedEmail);  // captured from response
-		DieticianloginInputdata.setPassword(modifiedPassword); 
-		
-		LoggerLoad.info("Overriding email and password with captured values:");
-		LoggerLoad.info("Email from dietician: " + modifiedEmail);
-		LoggerLoad.info("Password from dietician: " + modifiedPassword);
+	
 		 apiTextContext.request = given()
 		            .baseUri(configReader.getProperty("baseURL"))
 		            .contentType(ContentType.JSON)

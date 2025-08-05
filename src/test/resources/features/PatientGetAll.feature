@@ -21,3 +21,23 @@ Given Set dietician token
 Given Dietician create GET request 
 When Dietician send GET http request with endpoint
 Then Dietician recieves 200 ok with response body
+
+@GetAllpatientwithInvalidmethod
+Scenario: Check dietician able to retrieve all patient with invalid method
+Given Set dietician token
+Given Dietician create PUT request 
+When Dietician send PUT http request with endpoint
+Then Dietician recieves 405 method not allowed
+
+@GetAllpatientwithInvalidEndpoint
+Scenario: Check dietician able to retrieve all patient with invalid endpoint
+Given Set dietician token
+Given Dietician create GET request with invalid endpoint
+When Dietician send GET http request with invalid endpoint
+Then Dietician recieves 404 not found
+
+@GetAllpatientwithNoAuth
+Scenario: Check dietician able to retrieve patients morbidity details by patient ID
+Given Dietician create GET request with no auth
+When Dietician send GET http request with endpoint with no auth
+Then Dietician recieves 401 unauthorized
