@@ -11,6 +11,7 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+<<<<<<< HEAD
 			<name>cucumber.eclipse.builder.stepdefinition</name>
 			<arguments>
 			</arguments>
@@ -21,6 +22,8 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+=======
+>>>>>>> c6c6011 (Dietician module)
 			<name>cucumber.eclipse.builder.stepdefinition</name>
 			<arguments>
 			</arguments>

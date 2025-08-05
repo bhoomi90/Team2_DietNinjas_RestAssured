@@ -2,7 +2,7 @@
 Feature: GET Request for Dietician Module
 
   Background: Get By Id Dietician Details
-    Given Set admin bearer token
+    Given Set admin bearer token in Dietician Module
     
   @GetByIdDieticianTest_001
   Scenario: Check admin able to retrieve dietician by ID

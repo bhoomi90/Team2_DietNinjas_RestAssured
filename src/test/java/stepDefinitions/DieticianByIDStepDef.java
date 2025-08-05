@@ -37,7 +37,7 @@ public class DieticianByIDStepDef {
 		 String endpoint = dieticianGetIdTestCase.getEndpoints();
 
 		    // Replace {dieticianId} with actual ID
-		    String resolvedEndpoint = endpoint.replace("{dieticianId}", DieticianStepDef.dieticianId);
+		    String resolvedEndpoint = endpoint.replace("{dieticianId}", DieticianCreatDetailsStepDef.dieticianId);
 		    LoggerLoad.info("Resolved Endpoint: " + resolvedEndpoint);
 
 		    response = Hooks.request.get(resolvedEndpoint); // Use resolved endpoint
@@ -70,7 +70,7 @@ public class DieticianByIDStepDef {
 		
 		String endpoint = dieticianGetIdTestCase.getEndpoints();
 		
-	    String resolvedEndpoint = endpoint.replace("{dieticianId}", DieticianStepDef.dieticianId);
+	    String resolvedEndpoint = endpoint.replace("{dieticianId}", DieticianCreatDetailsStepDef.dieticianId);
 	    LoggerLoad.info("Resolved Endpoint: " + resolvedEndpoint);
 
 	    response = Hooks.request.post(resolvedEndpoint);  //<-- Negative testcase post method
