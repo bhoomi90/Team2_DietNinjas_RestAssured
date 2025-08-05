@@ -1,3 +1,4 @@
+@dieticianLogin
 Feature: dietician login 
 
 @dieticianvalidlogin
