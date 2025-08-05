@@ -417,5 +417,32 @@
 			"scenario": "Check if dietician able to morbidity condition by test name",
 			"morbidityTestName": "TSH1"
 		}
+	],
+	"patientTests": [
+		{
+			"testCaseId": "NewPatientForDeletion_test1",
+			"scenarioName": "Create patient",
+			"scenarioType": "positive",
+			"endpoint": "/patient",
+			"module": "CreatePatient",
+			"method": "POST",
+			"patientDataInput": {
+				"FirstName": "dipa",
+				"LastName": "patel",
+				"ContactNumber": "8521499521",
+				"Email": "patel12@gmail.com",
+				"Allergy": "ALMOND",
+				"FoodPreference": "Jain",
+				"CuisineCategory": "Goan",
+				"DateOfBirth":"1986-01-04"
+			},
+			"vitalsDataInput": {
+				"Weight": 65.5,
+				"Height": 6.0,
+				"Temperature": 99.9,
+				"SP": 110,
+				"DP": 60
+			}
+		}
 	]
 }

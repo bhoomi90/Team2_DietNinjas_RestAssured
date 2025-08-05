@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,16 +11,17 @@ import org.testng.Assert;
 import utilities.CRUDHelper;
 import utilities.apiTextContext;
 
+import static io.restassured.RestAssured.given;
+
 public class DeletePatientByIdStepDef {
     RequestSpecification request;
     Response response;
-    int patientId = 235;
+    int patientId;
 
     @Given("Dietician create DELETE request with no auth")
     public void dieticianCreateDELETERequestWithNoAuth() {
         //receiving a request
         request = CRUDHelper.getRequestWithNoAuth();
-
     }
 
     @When("Dietician send DELETE http request with endpoint")
@@ -75,8 +77,8 @@ public class DeletePatientByIdStepDef {
         CRUDHelper.loginWith(testCaseId);
     }
 
-    @Given("Login as a user with dietician login informatin as in {string} for deletion")
-    public void loginAsAUserWithDieticianLoginInformatinAsInForDeletion(String testCaseId) {
+    @Given("Login as a user with dietician login information as in {string} for deletion")
+    public void loginAsAUserWithDieticianLoginInformationAsInForDeletion(String testCaseId) {
         CRUDHelper.loginWith(testCaseId);
     }
 
@@ -103,5 +105,20 @@ public class DeletePatientByIdStepDef {
     @When("Dietician send DELETE http request with endpoint for delete patient by invalid endpoint")
     public void dieticianSendDELETEHttpRequestWithEndpointForDeletePatientByInvalidEndpoint() {
         response = request.delete("/patie" + patientId);
+    }
+
+    @Given("Login as a user with dietician login information as in {string} for creating patient")
+    public void loginAsAUserWithDieticianLoginInformationAsInForCreatingPatient(String testCaseId) {
+        CRUDHelper.loginWith(testCaseId);
+    }
+
+    @And("Create a new patient using {string}")
+    public void createANewPatientUsing(String testCaseId) {
+        patientId = CRUDHelper.createNewPatient(testCaseId);
+    }
+
+    @After
+    public void deletePatient() {
+        CRUDHelper.getRequestWithToken(apiTextContext.dieticianToken).delete("/patient/" + patientId);
     }
 }
