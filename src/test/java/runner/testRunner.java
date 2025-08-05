@@ -11,6 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 				   // "src\\test\\resources\\features\\02dieticianModule",
 				     // "src\\test\\resources\\features\\03DieticianLogin\\DieticianLogin.feature",
 				     //"src\\test\\resources\\features\\userLogout.feature"
+
 				},
 	    glue = "stepDefinitions",
 	    plugin = {"pretty", "html:target/cucumber-report.html",

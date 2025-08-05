@@ -454,7 +454,7 @@
 	      "expectedStatusCode":405 ,
 	      "expectedStatusLineMsg": "Method Not Allowed"
 	    },
-		}
+		 {
 		      "testCaseId": "GPT_005",
 		      "scenario": "Check admin is able to retrieve patients morbidity details by patient ID ",
 		      "module": "GetAllPatients",
