@@ -7,10 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		
 		
-		features = {"src\\test\\resources\\features\\01UserLogin\\01userLogin.feature",
-				    "src\\test\\resources\\features\\02POST_createDietician.feature",
-				      "src\\test\\resources\\features\\03DieticianLogin\\DieticianLogin.feature",
-				     //"src\\test\\resources\\features\\userLogout.feature"
+		features = {"src\\test\\resources\\features"
 				},
 	    glue = "stepDefinitions",
 	    plugin = {"pretty", "html:target/cucumber-report.html",
