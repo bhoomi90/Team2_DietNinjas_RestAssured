@@ -1710,5 +1710,33 @@
   					  "DP": 60
   				  }
   				}
-  			]
+  			],
+		"existingPatientTests":	[
+						{
+							  "testCaseId": "p1",
+							  "scenarioName": "ExistingPatient",
+							  "scenarioType": "negative",
+							  "endpoint": "/patient/newReports/{patientId}",	
+							  "module": "ExistingPatient",
+							  "method": "PUT",  
+							  "patientDataInput": {
+								  "FirstName": "lalu",
+								  "LastName": "patel",
+								  "ContactNumber": "9638527411",
+								  "Email": "lalu02@gmail.com",
+								  "Allergy": "ALMOND",
+								  "FoodPreference": "Vegetarian",
+								  "CuisineCategory": "Manipuri",
+								  "DateOfBirth":"1988-02-04"
+							  },
+							  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+							  "vitalsDataInput": {
+								  "Weight": 60.1,
+								  "Height": 6.0,
+								  "Temperature": 99.9,
+								  "SP": 110,
+								  "DP": 60
+							  }
+							}
+					]
 }
