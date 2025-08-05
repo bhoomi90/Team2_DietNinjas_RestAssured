@@ -103,7 +103,7 @@ Scenario Outline: Check if dietician able to retrieve morbidity condition by tes
   Then Dietician receives with status code <statusCode> for morbidity by test name
   Examples:
   |loginTestCaseId|testCaseId|statusCode|
-  |Morbidity_test6| Morbidity_ByTestname_test1_1 |  404     |
+  |Morbidity_test6| Morbidity_ByTestname_test1_1 |  404 |
 
 
 

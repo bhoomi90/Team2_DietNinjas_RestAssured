@@ -16,12 +16,14 @@ public class MorbidityStepDef {
 
     @Given("Dietician create a request for morbidity with no auth")
     public void dieticianCreateARequestForMorbidityWithNoAuth() {
-      request = CRUDHelper.getRequestWithNoAuth();
+
+        request = CRUDHelper.getRequestWithNoAuth();
     }
 
 
     @When("Dietician send GET http request with endpoint for morbidity")
     public void dieticianSendGETHttpRequestWithEndpointForMorbidity() {
+
         response = request.get("/morbidity");
     }
 

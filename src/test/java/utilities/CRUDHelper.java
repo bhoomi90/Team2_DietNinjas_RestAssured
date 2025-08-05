@@ -10,6 +10,7 @@ import pojo.loginData;
 import stepDefinitions.Hooks;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.request;
 
 
 public class CRUDHelper {
@@ -19,6 +20,7 @@ public class CRUDHelper {
     public static RequestSpecification getRequestWithNoAuth() {
 
         RestAssured.baseURI = configReader.getProperty ("baseURL");
+        //Setting up the request before sending an API
         RequestSpecification request = RestAssured.given();
         return request;
     }
@@ -70,4 +72,6 @@ public class CRUDHelper {
         MorbidityTestData morbidityTestData = JSONDataReader.getMorbidityTestById(allTestData.getMorbidityTests(), testCaseId);
         return morbidityTestData;
     }
+
+
 }
