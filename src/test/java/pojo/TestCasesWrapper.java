@@ -14,12 +14,14 @@ public class TestCasesWrapper {
     
     private List<TestCaseData> getAllPatientsTests;
     
+    private List<PatientTestData> patientTests;
+    private List<PatientTestData> updatePatientTests;
+    private List<PatientTestData> existingPatientTests;
+    
 	private List<TestCaseData> logoutTests;
 
 
-    private List<MorbidityTestData> morbidityTests;
-
-    private List<PatientTestData> patientTests;
+    private List<MorbidityTestData> morbidityTests;	
 
     public List<TestCaseData> getLoginTests() {
         return loginTests;
@@ -109,5 +111,21 @@ public class TestCasesWrapper {
     public void setPatientTests(List<PatientTestData> patientTests) {
         this.patientTests = patientTests;
     }
+    
+    public List<PatientTestData> getUpdatePatientTests() {
+		return updatePatientTests;
+	}
+
+	public void setUpdatePatientTests(List<PatientTestData> updatePatientTests) {
+		this.updatePatientTests = updatePatientTests;
+	}
+	
+    public List<PatientTestData> getExistingPatientTests() {
+		return existingPatientTests;
+	}
+
+	public void setExistingPatientTests(List<PatientTestData> existingPatientTests) {
+		this.existingPatientTests = existingPatientTests;
+	}
 }
 
