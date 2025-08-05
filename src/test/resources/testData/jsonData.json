@@ -823,31 +823,892 @@
       "morbidityTestName": "TSH1"
     }
   ],
+  
   "patientTests": [
-    {
-      "testCaseId": "NewPatientForDeletion_test1",
-      "scenarioName": "Create patient",
-      "scenarioType": "positive",
-      "endpoint": "/patient",
-      "module": "CreatePatient",
-      "method": "POST",
-      "patientDataInput": {
-        "FirstName": "dipa",
-        "LastName": "patel",
-        "ContactNumber": "8521499521",
-        "Email": "patel12@gmail.com",
-        "Allergy": "ALMOND",
-        "FoodPreference": "Jain",
-        "CuisineCategory": "Goan",
-        "DateOfBirth": "1986-01-04"
-      },
-      "vitalsDataInput": {
-        "Weight": 65.5,
-        "Height": 6.0,
-        "Temperature": 99.9,
-        "SP": 110,
-        "DP": 60
-      }
-    }
-  ]
+	{
+	     "testCaseId": "NewPatientForDeletion_test1",
+	     "scenarioName": "Create patient",
+	     "scenarioType": "positive",
+	     "endpoint": "/patient",
+	     "module": "CreatePatient",
+	     "method": "POST",
+	     "patientDataInput": {
+	       "FirstName": "dipa",
+	       "LastName": "patel",
+	       "ContactNumber": "8521499521",
+	       "Email": "patel12@gmail.com",
+	       "Allergy": "ALMOND",
+	       "FoodPreference": "Jain",
+	       "CuisineCategory": "Goan",
+	       "DateOfBirth": "1986-01-04"
+	     },
+	     "vitalsDataInput": {
+	       "Weight": 65.5,
+	       "Height": 6.0,
+	       "Temperature": 99.9,
+	       "SP": 110,
+	       "DP": 60
+	     }
+	   },
+  						{
+  						  "testCaseId": "p1",
+  						  "scenarioName": "Create patient",
+  						  "scenarioType": "positive",
+  						  "endpoint": "/patient",	
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "dipa",
+  							  "LastName": "patel",
+  							  "ContactNumber": "8521499521",
+  							  "Email": "patel12@gmail.com",
+  							  "Allergy": "ALMOND",
+  							  "FoodPreference": "Jain",
+  							  "CuisineCategory": "Goan",
+  							  "DateOfBirth":"1986-01-04"
+  						  },
+  						  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 65.5,
+  							  "Height": 6.0,
+  							  "Temperature": 99.9,
+  							  "SP": 110,
+  							  "DP": 60
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p2",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid token",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "lalu",
+  							  "LastName": "hirpara",
+  							  "ContactNumber": "8111499521",
+  							  "Email": "hirpara02@gmail.com",
+  							  "Allergy": "PISTACHO",
+  							  "FoodPreference": "Vegetarian",
+  							  "CuisineCategory": "assamese",
+  							  "DateOfBirth":"1986-05-02"
+  						  },
+  						  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with mandatory fields only",
+  						  "scenarioType": "positive",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "iaan",
+  							  "LastName": "sassaci",
+  							  "ContactNumber": "1234499521",
+  							  "Email": "sassaci02@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-11"
+  						  },
+  						  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with valid additional details only",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "1234499521",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid firstname",
+  						  "scenarioType": "positive",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "lar1ry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "1234499521",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid lastname",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhi$ya",
+  							  "ContactNumber": "1234499521",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid contactnumber",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "1234499*21",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with contactnumber more than 10 digits",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "12344999921",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with contactnumber less than 10 digits",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "123449921",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid email",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "1234499521",
+  							  "Email": "morkh@ya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid allergy",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "1234499521",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "FRUIT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid FoodPreference",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "1234499521",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "NonVegetarian",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid CuisineCategory",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "1234499521",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "NonVeg",
+  							  "CuisineCategory": "And$hra",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid DateOfBirth",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "1234499521",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "NonVeg",
+  							  "CuisineCategory": "Andhra",
+  							  "DateOfBirth":"1986-13-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid weight in vitals",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "1234499992",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 6000.5,
+  							  "Height": 5.0,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid height in vitals",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "larry",
+  							  "LastName": "morkhiya",
+  							  "ContactNumber": "1234499992",
+  							  "Email": "morkhiya12@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-08"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 0.5,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid method PUT",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "Atul",
+  							  "LastName": "Ghodakiya",
+  							  "ContactNumber": "8884499992",
+  							  "Email": "ghodakiya@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-16"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 0.5,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patnt",
+  						  "scenarioName": "Create patient with invalid endPoint",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "Atul",
+  							  "LastName": "Ghodakiya",
+  							  "ContactNumber": "8884499992",
+  							  "Email": "ghodakiya@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-16"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 0.5,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						},
+  						{
+  						  "testCaseId": "p3",
+  						  "endpoint": "/patient",
+  						  "scenarioName": "Create patient with invalid contentType",
+  						  "scenarioType": "negative",
+  						  "module": "CreatePatient",
+  						  "method": "POST",  
+  						  "patientDataInput": {
+  							  "FirstName": "Atul",
+  							  "LastName": "Ghodakiya",
+  							  "ContactNumber": "8884499992",
+  							  "Email": "ghodakiya@gmail.com",
+  							  "Allergy": "WALNUT",
+  							  "FoodPreference": "EGGETARIAN",
+  							  "CuisineCategory": "Manipuri",
+  							  "DateOfBirth":"1986-09-16"
+  						  },
+  						  "file": "./src/test/resources/testData/CBC-sample 1.pdf",
+  						  "vitalsDataInput": {
+  							  "Weight": 60.5,
+  							  "Height": 0.5,
+  							  "Temperature": 89.9,
+  							  "SP": 100,
+  							  "DP": 50
+  						  }
+  						}						
+  			 ],
+  			"updatePatientTests": [
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update Patient with invalid token",
+  				  "scenarioType": "negative",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "lalu",
+  					  "LastName": "patel",
+  					  "ContactNumber": "8521499521",
+  					  "Email": "patel12@gmail.com",
+  					  "Allergy": "ALMOND",
+  					  "FoodPreference": "Jain",
+  					  "CuisineCategory": "Goan",
+  					  "DateOfBirth":"1986-01-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 65.5,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 66
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update patient firstname and DP",
+  				  "scenarioType": "positive",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "lalu",
+  					  "LastName": "patel",
+  					  "ContactNumber": "8521499521",
+  					  "Email": "patel12@gmail.com",
+  					  "Allergy": "ALMOND",
+  					  "FoodPreference": "Jain",
+  					  "CuisineCategory": "Goan",
+  					  "DateOfBirth":"1986-01-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 65.5,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 66
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update Patient Contactnumber and SP",
+  				  "scenarioType": "positive",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "lalu",
+  					  "LastName": "patel",
+  					  "ContactNumber": "9638527411",
+  					  "Email": "patel12@gmail.com",
+  					  "Allergy": "ALMOND",
+  					  "FoodPreference": "Jain",
+  					  "CuisineCategory": "Goan",
+  					  "DateOfBirth":"1986-01-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 65.5,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 100,
+  					  "DP": 60
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update Patient DOB and Weight",
+  				  "scenarioType": "positive",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "lalu",
+  					  "LastName": "patel",
+  					  "ContactNumber": "9638527411",
+  					  "Email": "patel12@gmail.com",
+  					  "Allergy": "ALMOND",
+  					  "FoodPreference": "Jain",
+  					  "CuisineCategory": "Goan",
+  					  "DateOfBirth":"1988-02-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 60.1,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 60
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update Patient Email",
+  				  "scenarioType": "positive",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "lalu",
+  					  "LastName": "patel",
+  					  "ContactNumber": "9638527411",
+  					  "Email": "lalu02@gmail.com",
+  					  "Allergy": "ALMOND",
+  					  "FoodPreference": "Jain",
+  					  "CuisineCategory": "Goan",
+  					  "DateOfBirth":"1988-02-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 60.1,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 60
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update Patient FoodPreference",
+  				  "scenarioType": "positive",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "lalu",
+  					  "LastName": "patel",
+  					  "ContactNumber": "9638527411",
+  					  "Email": "lalu02@gmail.com",
+  					  "Allergy": "ALMOND",
+  					  "FoodPreference": "Vegetarian",
+  					  "CuisineCategory": "Goan",
+  					  "DateOfBirth":"1988-02-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 60.1,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 60
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update Patient CuisineCategory",
+  				  "scenarioType": "positive",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "lalu",
+  					  "LastName": "patel",
+  					  "ContactNumber": "9638527411",
+  					  "Email": "lalu02@gmail.com",
+  					  "Allergy": "ALMOND",
+  					  "FoodPreference": "Vegetarian",
+  					  "CuisineCategory": "Manipuri",
+  					  "DateOfBirth":"1988-02-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 60.1,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 60
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update Patient with empty mandatory fields",
+  				  "scenarioType": "negative",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "",
+  					  "LastName": "",
+  					  "ContactNumber": "",
+  					  "Email": "",
+  					  "Allergy": "",
+  					  "FoodPreference": "",
+  					  "CuisineCategory": "",
+  					  "DateOfBirth":""
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 60.1,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 60
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update Patient with invalid contact number",
+  				  "scenarioType": "negative",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					"FirstName": "lalu",
+  					"LastName": "patel",
+  					"ContactNumber": "963$527411",
+  					"Email": "lalu02@gmail.com",
+  					"Allergy": "ALMOND",
+  					"FoodPreference": "Vegetarian",
+  					"CuisineCategory": "Manipuri",
+  					"DateOfBirth":"1988-02-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 60.1,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 60
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update patient with invalid patientId",
+  				  "scenarioType": "negative",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					"FirstName": "lalu",
+  					"LastName": "patel",
+  					"ContactNumber": "9631527411",
+  					"Email": "lalu02@gmail.com",
+  					"Allergy": "ALMOND",
+  					"FoodPreference": "Vegetarian",
+  					"CuisineCategory": "Manipuri",
+  					"DateOfBirth":"1988-02-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 60.1,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 60
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update Patient without attach file",
+  				  "scenarioType": "positive",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "lalu",
+  					  "LastName": "patel",
+  					  "ContactNumber": "9638527411",
+  					  "Email": "lalu02@gmail.com",
+  					  "Allergy": "ALMOND",
+  					  "FoodPreference": "Vegetarian",
+  					  "CuisineCategory": "Manipuri",
+  					  "DateOfBirth":"1988-02-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 60.1,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 60
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update patient with invalid method",
+  				  "scenarioType": "negative",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "lalu",
+  					  "LastName": "patel",
+  					  "ContactNumber": "9638527411",
+  					  "Email": "lalu02@gmail.com",
+  					  "Allergy": "ALMOND",
+  					  "FoodPreference": "Vegetarian",
+  					  "CuisineCategory": "Manipuri",
+  					  "DateOfBirth":"1988-02-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 60.1,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 60
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update patient with invalid endPoint",
+  				  "scenarioType": "negative",
+  				  "endpoint": "/patint/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "lalu",
+  					  "LastName": "patel",
+  					  "ContactNumber": "9638527411",
+  					  "Email": "lalu02@gmail.com",
+  					  "Allergy": "ALMOND",
+  					  "FoodPreference": "Vegetarian",
+  					  "CuisineCategory": "Manipuri",
+  					  "DateOfBirth":"1988-02-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 60.1,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 60
+  				  }
+  				},
+  				{
+  				  "testCaseId": "p1",
+  				  "scenarioName": "Update patient with invalid contentType",
+  				  "scenarioType": "negative",
+  				  "endpoint": "/patient/{paientId}",	
+  				  "module": "UpdatePatient",
+  				  "method": "PUT",  
+  				  "patientDataInput": {
+  					  "FirstName": "lalu",
+  					  "LastName": "patel",
+  					  "ContactNumber": "9638527411",
+  					  "Email": "lalu02@gmail.com",
+  					  "Allergy": "ALMOND",
+  					  "FoodPreference": "Vegetarian",
+  					  "CuisineCategory": "Manipuri",
+  					  "DateOfBirth":"1988-02-04"
+  				  },
+  				  "file": "./src/test/resources/testData/HyperThyroid_Report_final.pdf",
+  				  "vitalsDataInput": {
+  					  "Weight": 60.1,
+  					  "Height": 6.0,
+  					  "Temperature": 99.9,
+  					  "SP": 110,
+  					  "DP": 60
+  				  }
+  				}
+  			]
 }
