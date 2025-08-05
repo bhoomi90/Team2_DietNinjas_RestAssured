@@ -29,11 +29,11 @@ public class Hooks {
     public void setup() {
         // Load base URL from config
         baseUrl = configReader.getProperty("baseURL");
-        logger.info("Base URL loaded: " + baseUrl);
+        LoggerLoad.info("Base URL loaded: " + baseUrl);
 
         // Load all test data from JSON
         allTestData = JSONDataReader.readAllModules("src/test/resources/testData/jsonData.json");
-        logger.info("All test data loaded");
+        LoggerLoad.info("All test data loaded");
 
     	
     }
@@ -44,3 +44,4 @@ public class Hooks {
         // Add cleanup steps if needed 
     }
 }
+

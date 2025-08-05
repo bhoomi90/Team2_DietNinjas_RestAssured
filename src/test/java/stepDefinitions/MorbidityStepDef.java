@@ -8,27 +8,29 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import utilities.CRUDHelper;
+import utilities.apiTextContext;
 
-public class morbidityStepsDef {
+public class MorbidityStepDef {
     RequestSpecification request;
     Response response;
 
     @Given("Dietician create a request for morbidity with no auth")
     public void dieticianCreateARequestForMorbidityWithNoAuth() {
-      request = CRUDHelper.getRequestWithNoAuth();
+
+        request = CRUDHelper.getRequestWithNoAuth();
     }
 
 
     @When("Dietician send GET http request with endpoint for morbidity")
     public void dieticianSendGETHttpRequestWithEndpointForMorbidity() {
+
         response = request.get("/morbidity");
     }
 
 
     @And("Patient create a request for morbidity with patient token")
     public void patientCreateARequestForMorbidityWithPatientToken() {
-
-
+        request = CRUDHelper.getRequestWithToken(apiTextContext.patientToken);
     }
 
     @When("Patient send GET http request with endpoint for morbidity")
@@ -40,12 +42,15 @@ public class morbidityStepsDef {
     }
 
 
-    @Given("Admin create a request for morbidity with admin token")
+    @And("Admin create a request for morbidity with admin token")
     public void adminCreateARequestForMorbidityWithAdminToken() {
+        request = CRUDHelper.getRequestWithToken(apiTextContext.authToken);
     }
 
     @When("Admin send GET http request with endpoint for morbidity")
     public void adminSendGETHttpRequestWithEndpointForMorbidity() {
+//      Send the GET request
+        response = request.get("/morbidity");
     }
 
 
@@ -53,21 +58,33 @@ public class morbidityStepsDef {
 
     @When("Admin send POST http request with endpoint for morbidity")
     public void adminSendPOSTHttpRequestWithEndpointForMorbidity() {
+        //      Send the POST request
+        response = request.post("/morbidity");
+
 
 
     }
 
-    @Then("Admin receives with status code <statusCode>")
-    public void adminReceivesWithStatusCodeStatusCode() {
+    @Then("Admin receives with status code {int}")
+    public void adminReceivesWithStatusCodeStatusCode(int expectedStatusCode) {
+//        From response read the status code
+          int actualStatusCode = response.getStatusCode();
+//        Assert the status code to be 405
+          Assert.assertEquals(actualStatusCode, expectedStatusCode);
+
     }
 
     @When("Admin send GET http request with invalid endpoint for morbidity")
     public void adminSendGETHttpRequestWithInvalidEndpointForMorbidity() {
+        //      Send the GET request
+        response = request.get("/morbidit");
     }
 
 
     @Given("Dietician create a request for morbidity with dietician token")
     public void dieticianCreateRequestForMorbidityWithDieticianToken() {
+        request = CRUDHelper.getRequestWithToken(apiTextContext.dieticianToken);
+
     }
 
     @Then("Dietician receives with status code {int}")
@@ -78,16 +95,17 @@ public class morbidityStepsDef {
 
     @When("Dietician send POST http request with endpoint for morbidity")
     public void dieticianSendPOSTHttpRequestWithEndpointForMorbidity() {
+        //      Send the POST request
+        response = request.post("/morbidity");
+
     }
-
-
-    @Then("Dietician receives with status code {int}")
-    public void dieticianReceivesWithStatusCodeStatusCode() {
-    }
-
 
     @Then("Admin receives with status code {int} with details of the patient id")
-    public void adminReceivesWithStatusCodeStatusCodeWithDetailsOfThePatientId() {
+    public void adminReceivesWithStatusCodeWithDetailsOfThePatientId(int expectedStatusCode) {
+        //  From response read the status code
+        int actualStatusCode = response.getStatusCode();
+        //  Assert the status code to be 200
+        Assert.assertEquals(actualStatusCode, expectedStatusCode);
 
     }
 
@@ -99,8 +117,37 @@ public class morbidityStepsDef {
           Assert.assertEquals(actualStatusCode, expectedStatusCode);
     }
 
-    @Given("Login as a user with username {string} and password {string}")
-    public void loginAsAUserWithUsernameAndPassword() {
+    @Given("Login as a user with patient login information as in {string}")
+    public void loginAsAUserWithPatientLoginInformationAsIn(String testCaseId) {
+        CRUDHelper.loginWith(testCaseId);
+    }
+
+    @Given("Login as a user with admin login information as in {string}")
+    public void loginAsAUserWithAdminLoginInformationAsIn(String testCaseId) {
+        CRUDHelper.loginWith(testCaseId);
+
+    }
+
+    @Given("Login as a user with dietician login information as in {string}")
+    public void loginAsAUserWithDieticianLoginInformationAsIn(String testCaseId) {
+        CRUDHelper.loginWith(testCaseId);
+
+    }
+
+    @Then("Dietician receives all morbidities with status code {int}")
+    public void dieticianReceivesAllMorbiditiesWithStatusCodeStatusCode(int expectedStatusCode) {
+//        From response read the status code
+        int actualStatusCode = response.getStatusCode();
+//        Assert the status code to be 200
+        Assert.assertEquals(actualStatusCode, expectedStatusCode);
+
+
+    }
+
+    @When("Dietician send GET http request with invalid endpoint for morbidity")
+    public void dieticianSendGETHttpRequestWithInvalidEndpointForMorbidity() {
+        //    Send the GET request
+        response = request.get("/morbidit");
 
     }
 }
