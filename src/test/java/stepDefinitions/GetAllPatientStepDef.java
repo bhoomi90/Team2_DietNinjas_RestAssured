@@ -73,7 +73,7 @@ public class GetAllPatientStepDef {
 	@Given("Set dietician token")
 	public void set_dietician_token() {
 		
-		String dieticaintoken = configReader.getProperty("dieticiantoken");
+		
 		token = apiTextContext.dieticianToken;
 		LoggerLoad.info("Dietician token value : " + token);
 		apiTextContext.request = given().baseUri(Hooks.baseUrl).header("Authorization", "Bearer " + token)
