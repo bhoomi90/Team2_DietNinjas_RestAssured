@@ -133,12 +133,10 @@ public class DieticianDeleteByIdStepDef {
 	    LoggerLoad.info("Reusing request with Bearer Token from background setup.");
 	  
 	}
-
 	
 	@When("Admin send DELETE http request with invalid endpoint in dietician Module")
 	public void admin_send_delete_http_request_with_invalid_endpoint_in_dietician_module() {
 	
-		
 		String endpoint = deleteDieticianTestCase.getEndpoints();
    	    LoggerLoad.info("Endpoint: " + endpoint);
    	    response = Hooks.request.post(endpoint);          //<---negative testcase invalid endpoint in jsondata

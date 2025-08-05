@@ -1,3 +1,4 @@
+@LogoutTests
 Feature: Logout get request
 
 Background: set authentication to logout user

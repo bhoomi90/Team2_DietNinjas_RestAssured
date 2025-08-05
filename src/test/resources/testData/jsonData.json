@@ -23,7 +23,7 @@
       "endpoints": "/login",
       "expectedStatusCode": 401,
       "expectedStatusLineMsg": "Unauthorized",
-      "typeOfTesting": "Negative",
+      "typeOfTesting": "Positive",
       "loginInputdata": {
         "password": " ",
         "userLoginEmail": "Team601@gmail.com"
@@ -37,7 +37,7 @@
       "endpoints": "/login",
       "expectedStatusCode": 405,
       "expectedStatusLineMsg": "Method Not Allowed",
-      "typeOfTesting": "Negative",
+      "typeOfTesting": "Positive",
       "loginInputdata": {
         "password": "test",
         "userLoginEmail": "Team801@gmail.com"

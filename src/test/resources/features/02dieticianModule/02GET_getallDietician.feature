@@ -1,5 +1,5 @@
 @DieticianAPI @GetAllDietician
-Feature: GET Request for Dietician Module
+Feature: Post Request for Dietician Module
 
   Background: Get all Dietician Details
     Given Set admin bearer token in Dietician Module

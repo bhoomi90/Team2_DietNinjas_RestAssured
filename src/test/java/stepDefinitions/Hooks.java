@@ -33,9 +33,8 @@ public class Hooks {
 
         // Load all test data from JSON
         allTestData = JSONDataReader.readAllModules("src/test/resources/testData/jsonData.json");
-        LoggerLoad.info("All test data loaded");
 
-    	
+        LoggerLoad.info("All test data loaded");
     }
 
     @After
