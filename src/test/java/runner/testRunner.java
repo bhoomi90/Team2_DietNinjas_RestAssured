@@ -4,6 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
+		
 	    plugin = {
 	        "pretty",
 	        "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
@@ -13,8 +14,8 @@ import io.cucumber.testng.CucumberOptions;
 	     //   "com.aventstack.chaintest.plugins.ChainTestCucumberListener:"
 	    },
 	    monochrome = false,
-	 //  tags = "@DieticianAPI",
-	    features = {"src/test/resources/features"},
+	  //tags = "@dieticianvalidlogin",
+	    features = {"src\\test\\resources\\features"},
 	    glue = {"stepDefinitions"}
 	)
 public class testRunner extends AbstractTestNGCucumberTests {

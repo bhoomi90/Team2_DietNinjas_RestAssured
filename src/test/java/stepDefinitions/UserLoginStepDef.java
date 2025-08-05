@@ -188,21 +188,22 @@ public void user_creates_post_request_with_request_body_request_body_userlogin_a
 		.log().all();
 	}
 	
-	@Given("User creates Post request with dietician input request body.Request body : Userlogin and password")
-	public void user_creates_post_request_with_dietician_input_request_body_request_body_userlogin_and_password() throws InterruptedException {
-	   
-		LoggerLoad.info("Sent a post request with valid dietician credentials");
-		Hooks.currentLoginTest = JSONDataReader.getTestCaseById(Hooks.allTestData.getLoginTests(), "LT_006");
-		LoggerLoad.info("Loaded Login Test Case: " + Hooks.currentLoginTest.getScenario());
 
-		DieticianloginInputdata = Hooks.currentLoginTest.getDieticianloginInputdata();
+@Given("User creates Post request with dietician input request body.Request body : Userlogin and password")
+public void user_creates_post_request_with_dietician_input_request_body_request_body_userlogin_and_password() {
+   
+	LoggerLoad.info("Sent a post request with valid dietician credentials");
+	Hooks.currentLoginTest = JSONDataReader.getTestCaseById(Hooks.allTestData.getLoginTests(), "LT_006");
+	LoggerLoad.info("Loaded Login Test Case: " + Hooks.currentLoginTest.getScenario());
+
+	DieticianloginInputdata = Hooks.currentLoginTest.getDieticianloginInputdata();
+
+	 apiTextContext.request = given()
+	            .baseUri(configReader.getProperty("baseURL"))
+	            .contentType(ContentType.JSON)
+	            .body(DieticianloginInputdata);
 	
-		 apiTextContext.request = given()
-		            .baseUri(configReader.getProperty("baseURL"))
-		            .contentType(ContentType.JSON)
-		            .body(DieticianloginInputdata);
-		
-	}
+}
 	
 	@Given("User creates Post request with invalid dietician credential")
 	public void user_creates_post_request_with_invalid_dietician_credential() {
