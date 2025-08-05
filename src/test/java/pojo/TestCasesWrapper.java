@@ -15,6 +15,8 @@ public class TestCasesWrapper {
 
     private List<MorbidityTestData> morbidityTests;
 
+    private List<PatientTestData> patientTests;
+
     public List<TestCaseData> getLoginTests() {
         return loginTests;
     }
@@ -77,6 +79,14 @@ public class TestCasesWrapper {
 
     public void setMorbidityTests(List<MorbidityTestData> morbidityTests) {
         this.morbidityTests = morbidityTests;
+    }
+
+    public List<PatientTestData> getPatientTests() {
+        return patientTests;
+    }
+
+    public void setPatientTests(List<PatientTestData> patientTests) {
+        this.patientTests = patientTests;
     }
 }
 
